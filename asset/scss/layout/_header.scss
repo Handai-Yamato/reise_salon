@@ -1,0 +1,258 @@
+@use "../mixin" as *;
+@use "../setting" as *;
+
+/*********************************
+	ヘッダーの設定
+*********************************/
+.l-header {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  z-index: index($elements, l-header);
+  top: 0;
+}
+
+.l-header__inner {
+  padding: 15px 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.l-header__list {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  display: flex;
+}
+
+.l-header__item span {
+  color: #b29a71;
+}
+
+.l-header__item ~ .l-header__item {
+  margin-left: 60px; //最初の要素以外に余白を指定
+
+  @include mq(tab) {
+    margin-left: 25px;
+  }
+}
+
+.l-header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/*********************************
+	モーダルの設定
+*********************************/
+.l-header__modal {
+  z-index: index($elements, l-header__modal);
+}
+
+.l-header__modal-mask {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: index($elements, l-header__modal-mask);
+}
+
+.l-header__modal-menu {
+  width: 100%;
+  padding: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: index($elements, l-header__modal-menu);
+  text-align: center;
+
+  a {
+    color: $color-text2;
+  }
+}
+
+.l-header__modal-button {
+  display: flex;
+  justify-content: center;
+}
+
+.l-header__modal-login,
+.l-header__modal-cart {
+  width: 250px;
+  display: inline-block;
+  border: solid 1px $color-text1;
+  text-align: center;
+  padding: 7.25px 0;
+}
+
+.l-header__modal-cart {
+  margin-left: 60px;
+}
+
+.l-header__modal-border {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.l-header__modal-lists {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: left;
+  font-size: 1.8rem;
+  height: 370px;
+  overflow: scroll;
+
+  a {
+    color: inherit;
+  }
+}
+
+/*********************************
+	モーダルのトグルメニューの設定
+*********************************/
+.l-header__modal-list {
+  list-style-type: none;
+
+  dd ul {
+    list-style-type: none;
+  }
+
+  dd ul li {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+//カテゴリーメニュー
+.l-header__modal-item--category {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  span::before,
+  span::after {
+    display: block;
+    content: "";
+    background-color: $color-text2;
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  span::before {
+    width: 2px;
+    height: 15px;
+  }
+}
+
+//ラインナップメニュー
+.l-header__modal-item--lineup {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  span::before,
+  span::after {
+    display: block;
+    content: "";
+    background-color: $color-text2;
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  span::before {
+    width: 2px;
+    height: 15px;
+  }
+}
+
+// 一番上の要素以外にmargin-topを指定
+.l-header__modal-item ~ .l-header__modal-item {
+  margin-top: 25px;
+}
+
+.l-header__modal-banner {
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: #ffffff;
+  background: $color-text2;
+  font-size: 2.4rem;
+  padding: 20px;
+
+  span {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  span dd {
+    overflow: scroll;
+    height: 100px;
+  }
+}
+
+.l-header__modal-sns {
+  margin-top: 30px;
+
+  a {
+    display: inline-block;
+  }
+
+  a ~ a {
+    margin-left: 15px;
+  }
+}
+
+.l-header__modal-copyright {
+  margin-top: 20px;
+}

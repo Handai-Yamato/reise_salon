@@ -1,0 +1,49 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-top {
+  position: relative;
+  margin-top: -100px; //headerの高さだけ上に詰める
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include bg-image-jpg($filename: home-top-bg);
+    background-repeat: no-repeat;
+    background-position: 40% center; //変数上書き
+    -webkit-animation: zoom 10s 1; //秒数指定
+    animation: zoom 10s 1;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1) ;
+  }
+  100% {
+    transform: scale(1.08) translate(4%);; //アニメーション終了後の画像倍率,左寄せで拡大
+  }
+}
+
+.p-home-top__inner {
+  text-align: center;
+  @include centering();
+  top: 55%;
+  width: 100%;
+}
+
+.p-home-top__logo {
+}
+
+.p-home-top__text {
+  margin-top: 50px;
+  font-size: 36px;
+  color: $color-text1;
+}

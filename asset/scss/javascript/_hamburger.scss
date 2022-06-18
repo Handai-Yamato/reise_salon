@@ -1,0 +1,56 @@
+@use "../mixin" as *;
+@use "../setting" as *;
+
+.js-hamburger {
+  position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  transform: rotate(180deg);
+}
+
+/*ボタン内側*/
+.js-hamburger span {
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 1px;
+  background: $color-text2;
+}
+
+.js-hamburger span:nth-of-type(1) {
+  top: 15px;
+  width: 12px;
+}
+
+.js-hamburger span:nth-of-type(2) {
+  top: 23px;
+  width: 22px;
+}
+
+.js-hamburger span:nth-of-type(3) {
+  top: 31px;
+  width: 32px;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.js-hamburger.is-active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 24px;
+}
+
+.js-hamburger.is-active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.js-hamburger.is-active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 24px;
+}
