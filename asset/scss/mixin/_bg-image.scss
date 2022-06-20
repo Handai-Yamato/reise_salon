@@ -1,0 +1,15 @@
+@mixin bg-image-jpg($filename) {
+	background-image: url("../img/#{$filename}.jpg");
+	background-size: cover;
+	background-position: center center;
+  }
+  
+  // @include bg-image($filename:home_top);
+  
+  @mixin bg-image-png($filename) {
+	background-image: url("../img/#{$filename}.png");
+	background-size: cover;
+	background-position: center center;
+  }
+  
+  // @include bg-image-png($filename:header_icon);

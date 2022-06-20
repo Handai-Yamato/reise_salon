@@ -1,0 +1,74 @@
+@use "../setting" as *;
+@use "../mixin" as *;
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+  height: 100%;
+  font-feature-settings: "palt" 1;
+}
+
+body {
+  color: $color-text2;
+  font-size: 1.6rem;
+  font-family: $base-font;
+  letter-spacing: 0.1em;
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  position: relative;
+  text-align: justify;
+}
+
+img,
+video,
+object {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a:hover img {
+  text-decoration: none;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+
+  transition: all 0.3s;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a:visited {
+  color: inherit;
+}

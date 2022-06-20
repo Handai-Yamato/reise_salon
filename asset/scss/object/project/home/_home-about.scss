@@ -1,0 +1,100 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-about {
+  padding: 120px 0;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @include mq(xl) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-home-about__title {
+  font-size: 2.4rem;
+  color: $color-accent3;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  span {
+    color: $color-text2;
+    font-size: 3.6rem;
+    display: block;
+  }
+
+  @include mq(lg) {
+    span {
+        margin-top: 20px;
+        line-height: 0.5833;
+    }
+  }
+}
+
+.p-home-about__body {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  @include mq(lg) {
+    display: block;
+    
+  }
+
+}
+
+.p-home-about__img {
+  position: relative;
+  width: 600px;
+
+  &::after {
+    @include pseudo($content: "This is a sample image.");
+    font-size: 10px;
+    color: #d1d1d1;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  @include mq(lg) {
+    width: 100%;
+    
+  }
+}
+
+.p-home-about__text--large {
+  font-size: 2.4rem;
+  line-height: 1.83;
+}
+
+.p-home-about__text {
+  width: 100%;
+  max-width: 500px;
+  margin-left: 110px;
+
+  p {
+    text-align: justify;
+    margin-top: 50px;
+    line-height: 2.25;
+  }
+
+  @include mq(xl) {
+    margin-left: 60px;
+
+    p {
+        margin-top: 15px;
+    }
+  }
+
+  @include mq(lg) {
+    margin-left: 0;
+    display: inline-block;
+  }
+}
+
+.p-home-about__border {
+    margin: 0 auto;
+}

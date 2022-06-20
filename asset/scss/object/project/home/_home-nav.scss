@@ -1,0 +1,19 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-nav__inner {
+  padding: 50px 0;
+}
+
+.p-home-nav__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 14px;
+
+  @include mq(md) {
+    display: none;
+  } 
+}
