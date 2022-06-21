@@ -1,5 +1,6 @@
 @mixin mq($point) {
-  @if $point == xl {
+  
+  @if $point == tab {
     @media (max-width: 1199px) {
       @content;
     }
@@ -22,6 +23,12 @@
       @content;
     }
   }
+
+  @if $point == sp {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
 }
 
 @include mq(xl) {
@@ -31,4 +38,9 @@
 @include mq(md) {
 }
 @include mq(sm) {
+
+}
+@include mq(tab) {
+}
+@include mq(sp) {
 }

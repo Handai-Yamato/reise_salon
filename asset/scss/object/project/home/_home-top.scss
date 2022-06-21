@@ -26,7 +26,6 @@
     height: 1325px;
   }
 
- 
 } 
 
 @keyframes zoom {
@@ -48,6 +47,7 @@
     padding-right: 6%;
     padding-left: 6%;
   }
+
 }
 
 .p-home-top__logo {
@@ -62,4 +62,6 @@
     font-size: calc(1.7rem + 19 * (100vw - 320px) / 447); //36px~17pxで可変
 
   }
+  font-size: 36px;
+  color: $color-text1;
 }

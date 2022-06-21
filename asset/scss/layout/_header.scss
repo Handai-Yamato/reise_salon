@@ -41,6 +41,10 @@
 
 .l-header__item ~ .l-header__item {
   margin-left: 60px; //最初の要素以外に余白を指定
+
+  @include mq(tab) {
+    margin-left: 25px;
+  }
 }
 
 .l-header__right {
@@ -91,7 +95,10 @@
 .l-header__modal-menu-wrap {
   @include mq(md) {
     order: 2;
+  a {
+    color: $color-text2;
   }
+}
 }
 
 .l-header__modal-button {
@@ -105,6 +112,7 @@
   @include mq(md) {
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
   }
+
 }
 
 .l-header__modal-login,
@@ -118,6 +126,7 @@
   @include mq(md) {
     padding: 10px;
   }
+
 }
 
 .l-header__modal-cart {
@@ -126,6 +135,7 @@
   @include mq(md) {
     margin-left: 20px;
   }
+
 }
 
 .l-header__modal-border {
@@ -134,8 +144,10 @@
   margin-top: 50px;
 
   @include mq(md) {
+  @include mq(sp) {
     display: none;
   }
+}
 }
 
 .l-header__modal-lists {
@@ -245,6 +257,7 @@
     order: 3;
     margin-top: 60px;
   }
+
 }
 
 /*********************************
@@ -335,3 +348,48 @@
     height: 15px;
   }
 }
+
+// 一番上の要素以外にmargin-topを指定
+.l-header__modal-item ~ .l-header__modal-item {
+  margin-top: 25px;
+}
+
+.l-header__modal-banner {
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: #ffffff;
+  background: $color-text2;
+  font-size: 2.4rem;
+  padding: 20px;
+
+  span {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  span dd {
+    overflow: scroll;
+    height: 100px;
+  }
+}
+
+.l-header__modal-sns {
+  margin-top: 30px;
+
+  a {
+    display: inline-block;
+  }
+
+  a ~ a {
+    margin-left: 15px;
+  }
+}
+
+.l-header__modal-copyright {
+  margin-top: 20px;
+}
+
+
+

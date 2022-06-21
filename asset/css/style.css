@@ -339,12 +339,18 @@ body {
   color: #808080;
   font-size: 1.6rem;
   font-family: "Noto Sans JP", sans-serif;
+<<<<<<< HEAD
   letter-spacing: 0.1em;
+=======
+>>>>>>> origin/master
   min-width: 320px;
   width: 100%;
   overflow-x: hidden;
   background-attachment: fixed;
+<<<<<<< HEAD
   background: #ffff;
+=======
+>>>>>>> origin/master
   position: relative;
   text-align: justify;
 }
@@ -402,12 +408,15 @@ a:visited {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1024px) {
   .l-header__gnav {
     display: none;
   }
 }
 
+=======
+>>>>>>> origin/master
 .l-header__list {
   list-style-type: none;
   font-weight: 400;
@@ -424,6 +433,14 @@ a:visited {
 .l-header__item ~ .l-header__item {
   margin-left: 60px;
 }
+<<<<<<< HEAD
+=======
+@media (max-width: 1199px) {
+  .l-header__item ~ .l-header__item {
+    margin-left: 25px;
+  }
+}
+>>>>>>> origin/master
 
 .l-header__right {
   display: flex;
@@ -460,6 +477,7 @@ a:visited {
   z-index: 3;
   text-align: center;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .l-header__modal-menu {
     padding-top: 0;
@@ -475,12 +493,17 @@ a:visited {
   .l-header__modal-menu-wrap {
     order: 2;
   }
+=======
+.l-header__modal-menu a {
+  color: #808080;
+>>>>>>> origin/master
 }
 
 .l-header__modal-button {
   display: flex;
   justify-content: center;
 }
+<<<<<<< HEAD
 .l-header__modal-button a {
   color: #808080;
 }
@@ -489,6 +512,8 @@ a:visited {
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447);
   }
 }
+=======
+>>>>>>> origin/master
 
 .l-header__modal-login,
 .l-header__modal-cart {
@@ -498,28 +523,38 @@ a:visited {
   text-align: center;
   padding: 7.25px 0;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .l-header__modal-login,
 .l-header__modal-cart {
     padding: 10px;
   }
 }
+=======
+>>>>>>> origin/master
 
 .l-header__modal-cart {
   margin-left: 60px;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .l-header__modal-cart {
     margin-left: 20px;
   }
 }
+=======
+>>>>>>> origin/master
 
 .l-header__modal-border {
   width: 600px;
   margin: 0 auto;
   margin-top: 50px;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
+=======
+@media (max-width: 700px) {
+>>>>>>> origin/master
   .l-header__modal-border {
     display: none;
   }
@@ -540,6 +575,7 @@ a:visited {
 .l-header__modal-lists a {
   color: inherit;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .l-header__modal-lists {
     display: block;
@@ -631,6 +667,8 @@ a:visited {
     margin-top: 60px;
   }
 }
+=======
+>>>>>>> origin/master
 
 /*********************************
 	モーダルのトグルメニューの設定
@@ -712,6 +750,7 @@ a:visited {
   height: 15px;
 }
 
+<<<<<<< HEAD
 .l-main__inner {
   max-width: 1920px;
   margin: 0 auto;
@@ -756,6 +795,55 @@ a:visited {
   .c-heading-2 {
     font-size: calc(2rem + 4 * (100vw - 320px) / 447);
   }
+=======
+.l-header__modal-item ~ .l-header__modal-item {
+  margin-top: 25px;
+}
+
+.l-header__modal-banner {
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: #ffffff;
+  background: #808080;
+  font-size: 2.4rem;
+  padding: 20px;
+}
+.l-header__modal-banner span {
+  display: block;
+  font-size: 1.4rem;
+}
+.l-header__modal-banner span dd {
+  overflow: scroll;
+  height: 100px;
+}
+
+.l-header__modal-sns {
+  margin-top: 30px;
+}
+.l-header__modal-sns a {
+  display: inline-block;
+}
+.l-header__modal-sns a ~ a {
+  margin-left: 15px;
+}
+
+.l-header__modal-copyright {
+  margin-top: 20px;
+}
+
+.l-main__inner {
+  max-width: 1920px;
+}
+
+.c-border {
+  border: 1px solid #d1d1d1;
+}
+
+.c-copyright {
+  font-size: 10px;
+>>>>>>> origin/master
 }
 
 .js-hamburger {
@@ -853,11 +941,14 @@ a:visited {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
+<<<<<<< HEAD
 @media (max-width: 1024px) {
   .p-home-top {
     height: 1325px;
   }
 }
+=======
+>>>>>>> origin/master
 
 @-webkit-keyframes zoom {
   0% {
@@ -885,6 +976,7 @@ a:visited {
   top: 55%;
   width: 100%;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .p-home-top__inner {
     padding-right: 6%;
@@ -902,6 +994,14 @@ a:visited {
     font-size: calc(1.7rem + 19 * (100vw - 320px) / 447);
   }
 }
+=======
+
+.p-home-top__text {
+  margin-top: 50px;
+  font-size: 36px;
+  color: #211613;
+}
+>>>>>>> origin/master
 
 .p-home-nav__inner {
   padding: 50px 0;
@@ -915,6 +1015,7 @@ a:visited {
   margin: 0 auto;
   font-size: 14px;
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .p-home-nav__list {
     display: none;
@@ -1142,10 +1243,13 @@ a:visited {
   border-radius: 50%;
   /* 要素を丸くする */
 }
+=======
+>>>>>>> origin/master
 
 .u-font-serif {
   font-family: "Noto Serif JP", serif;
 }
+<<<<<<< HEAD
 
 .u-inline-block {
   display: inline-block;
@@ -1162,4 +1266,6 @@ a:visited {
 .u-fw-300 {
   font-weight: 300;
 }
+=======
+>>>>>>> origin/master
 /*# sourceMappingURL=style.css.map */
