@@ -22,6 +22,10 @@
     animation-iteration-count: 1;
   }
 
+  @include mq(lg) {
+    height: 1325px;
+  }
+
  
 } 
 
@@ -41,8 +45,8 @@
   width: 100%;
 
   @include mq(md) {
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 6%;
+    padding-left: 6%;
   }
 }
 

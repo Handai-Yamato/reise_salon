@@ -2,7 +2,12 @@
 @use "../../../setting" as *;
 
 .p-home-about {
-  padding: 120px 0;
+  background: $color-background2;
+  
+}
+
+.p-home-about__inner {
+  padding: 80px 0;
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
@@ -10,6 +15,12 @@
   @include mq(xl) {
     padding-right: 5%;
     padding-left: 5%;
+  }
+}
+
+.p-home-about__content {
+  @include mq(lg) {
+    margin: 0 auto;
   }
 }
 
@@ -25,26 +36,46 @@
     display: block;
   }
 
+  @include mq(md) {
+    font-size: calc(2rem + 4 * (100vw - 320px) / 447); //24px~20pxで可変
+
+    span {
+      font-size: calc(2.4rem + 12 * (100vw - 320px) / 447); //36px~24pxで可変
+    }
+  }
+
   @include mq(lg) {
     span {
-        margin-top: 20px;
-        line-height: 0.5833;
+      margin-top: 20px;
+      line-height: 0.5833;
     }
   }
 }
 
 .p-home-about__body {
-  padding: 70px 0px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
 
-  @include mq(lg) {
-    display: block;
-    
+  gap: 100px;
+
+  @include mq(md) {
   }
 
+  @include mq(lg) {
+    display: block;
+    max-width: 600px;
+  }
+}
+
+.p-home-about__body02 {
+  @include mq(lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
 }
 
 .p-home-about__img {
@@ -54,6 +85,7 @@
   &::after {
     @include pseudo($content: "This is a sample image.");
     font-size: 10px;
+    letter-spacing: 0.1em;
     color: #d1d1d1;
     right: 0;
     margin-top: 10px;
@@ -61,19 +93,29 @@
 
   @include mq(lg) {
     width: 100%;
-    
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
 .p-home-about__text--large {
   font-size: 2.4rem;
   line-height: 1.83;
+
+  @include mq(lg) {
+    font-size: 2.8rem;
+  }
+
+  @include mq(md) {
+    font-size: calc(2.2rem + 6 * (100vw - 320px) / 447); //28px~22pxで可変
+    line-height: 1.7;
+  }
 }
 
 .p-home-about__text {
   width: 100%;
   max-width: 500px;
-  margin-left: 110px;
+  margin-top: 30px;
 
   p {
     text-align: justify;
@@ -82,19 +124,28 @@
   }
 
   @include mq(xl) {
-    margin-left: 60px;
-
     p {
-        margin-top: 15px;
+      margin-top: 35px;
     }
   }
 
   @include mq(lg) {
     margin-left: 0;
-    display: inline-block;
+    margin-right: auto;
+    max-width: 100%;
+    font-size: 2.4rem;
+  }
+
+  @include mq(md) {
+    font-size: calc(1.6rem + 8 * (100vw - 320px) / 447); //28px~22pxで可変
   }
 }
 
 .p-home-about__border {
-    margin: 0 auto;
+  margin: 0 auto;
+  display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
 }

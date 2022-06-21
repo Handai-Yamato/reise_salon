@@ -8,6 +8,7 @@
     font-weight: 400;
 
     @include mq(md) {
-        font-size: 2.4rem;
+    font-size: calc(2.0rem + 4 * (100vw - 320px) / 447); //24px~20pxで可変
+
     }
 }

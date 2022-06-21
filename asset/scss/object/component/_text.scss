@@ -1,3 +1,23 @@
 @use "../../mixin" as *;
 @use "../../setting" as *;
 
+.c-text--xxl {
+    font-size: 2.4rem;
+}
+
+.c-text--xl {
+    font-size: 2.1rem;
+}
+
+.c-text--lg {
+    font-size: 1.8rem;
+}
+
+.c-text--sm {
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.c-text--xs {
+    font-size: 1.2rem;
+}

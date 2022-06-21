@@ -1,0 +1,75 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-menu {
+  letter-spacing: 0.05em;
+}
+
+.p-home-menu__inner {
+  max-width: 1200px;
+  padding: 80px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.p-home-menu__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 60px 0;
+}
+
+.p-home-menu__items {
+  border: 1px solid $color-menu-accent;
+  width: 390px;
+  font-size: 1.4rem;
+  text-align: justify;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+// 一番左の要素以外に余白（margin-left）を指定
+.p-home-menu__items ~ .p-home-menu__items {
+  margin-left: 30px;
+}
+
+.p-home-menu__item {
+  ul {
+    padding: 20px 25px;
+  }
+
+  hr {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  &--title {
+    color: #ffff;
+    background: $color-menu-accent;
+    text-align: center;
+  }
+}
+
+.p-home-menu__item--treatment {
+  height: 425px;
+  list-style: none;
+  text-align: left;
+
+  li ~ li {
+    margin-top: 10px;
+
+    &:before {
+      position: relative;
+      top: -5px; /* 位置調整 */
+      right: 6px; /* 位置調整 */
+      content: ""; /* 空の要素作成 */
+      width: 3px; /* 幅指定 */
+      height: 3px; /* 高さ指定 */
+      display: inline-block; /* インラインブロックにする */
+      background-color: $color-text2; /* 背景色指定 */
+      border-radius: 50%; /* 要素を丸くする */
+    }
+  }
+}
