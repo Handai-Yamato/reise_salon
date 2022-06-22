@@ -24,23 +24,23 @@ mask.addEventListener("click", function () {
 /*********************************
 	トグルメニュー
 *********************************/
+/*--------------------------------
+	ヘッダー
+--------------------------------*/
+
 /******** 要素を取得 **********/
 const toggle = document.querySelectorAll(".js-toggle");
 const menu = document.querySelectorAll(".js-toggle-menu");
 
-/******** js-toggleをクリックするとトグルメニューが追加 ※１つの要素の場合 **********/
-// toggle.addEventListener("click", function () {
-//   toggle.classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
-//   menu.classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
-// });
-
-/******** js-toggleをクリックするとトグルメニューが追加 ※複数要素の場合 **********/
+/******** js-toggleをクリックするとトグルメニューが追加 ※複数要素にイベントを発生させる場合 **********/
 for (let i = 0; i < toggle.length; i++) {
   toggle[i].onclick = function (e) {
     toggle[i].classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
     menu[i].classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
+
   };
 }
+
 
 /*********************************
 	スライダー

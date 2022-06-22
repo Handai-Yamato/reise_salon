@@ -4,8 +4,9 @@
 .p-home-top {
   position: relative;
   margin-top: -100px; //headerの高さだけ上に詰める
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
   overflow: hidden;
 
   &::before {
@@ -16,8 +17,8 @@
     @include bg-image-jpg($filename: home-top-bg);
     background-repeat: no-repeat;
     background-position: 40% center; //変数上書き
-    -webkit-animation: zoom 10s 1; //秒数指定
-    animation: zoom 10s 1;
+    -webkit-animation: zoom 8s 1; //秒数指定
+    animation: zoom 8s 1;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
@@ -33,7 +34,7 @@
     transform: scale(1) ;
   }
   100% {
-    transform: scale(1.08) translate(4%);; //アニメーション終了後の画像倍率,左寄せで拡大
+    transform: scale(1.08) translate(2%);; //アニメーション終了後の画像倍率,左寄せで拡大
   }
 }
 

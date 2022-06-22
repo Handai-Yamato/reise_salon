@@ -10,29 +10,50 @@
   padding: 80px 0;
   margin: 0 auto;
   text-align: center;
+
+  @include mq(xl) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-home-menu__wrap {
+  padding: 60px 0;
+
+  @include mq(md) {
+    hr {
+      display: none;
+    }
+  }
 }
 
 .p-home-menu__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   list-style-type: none;
-  padding: 60px 0;
+  margin-top: 30px;
+
+  @include mq(xl) {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  @include mq(md) {
+    flex-direction: column;
+  }
 }
 
 .p-home-menu__items {
   border: 1px solid $color-menu-accent;
-  width: 390px;
+  max-width: 1200px;
   font-size: 1.4rem;
   text-align: justify;
+  margin-right: auto;
+  margin-left: auto;
 
   li {
     list-style-type: none;
   }
-}
-
-// 一番左の要素以外に余白（margin-left）を指定
-.p-home-menu__items ~ .p-home-menu__items {
-  margin-left: 30px;
 }
 
 .p-home-menu__item {
@@ -49,6 +70,22 @@
     color: #ffff;
     background: $color-menu-accent;
     text-align: center;
+    padding: 8px 0;
+  }
+
+  @include mq(xl) {
+    hr {
+      max-width: 93%;
+      margin: 0 auto;
+    }
+  }
+
+  @include mq(md) {
+    /* borderを<hr> →「border-top」へ切り変えるため、paddingからmarginへ変更 */
+    ul {
+      padding: 20px 0;
+      margin: 0 25px;
+    }
   }
 }
 
@@ -59,6 +96,7 @@
 
   li ~ li {
     margin-top: 10px;
+    margin-left: 15px;
 
     &:before {
       position: relative;
@@ -70,6 +108,257 @@
       display: inline-block; /* インラインブロックにする */
       background-color: $color-text2; /* 背景色指定 */
       border-radius: 50%; /* 要素を丸くする */
+    }
+  }
+
+  @include mq(md) {
+    height: auto;
+    margin-top: -20px;
+  }
+}
+
+/*********************************
+  おすすめメニュー 固有スタイル
+*********************************/
+.p-home-menu__items--recommend {
+  width: calc((100% - 60px) / 3); /*px部分はmargin-rightの合計値を入れる*/
+
+  @include mq(xl) {
+    width: calc((100% - 30px) / 2); /*px部分はmargin-rightの合計値を入れる*/
+  }
+
+  @include mq(md) {
+    width: 100%;
+    max-width: 590px;
+  }
+}
+
+.p-home-menu__items--recommend ~ .p-home-menu__items--recommend {
+  margin-left: 30px; /* 一番左の要素以外に余白（margin-left）を指定 */
+  @include mq(xl) {
+    margin-left: 0;
+  }
+
+  @include mq(md) {
+    margin-left: auto;
+  }
+}
+
+/******** viewport 767px以下 要素並び替え、borderの切り替え **********/
+@include mq(md) {
+  .p-home-menu__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p-home-menu__item--menu {
+    order: 1;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .p-home-menu__item--time {
+    order: 2;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .p-home-menu__toggle {
+    order: 4;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .p-home-menu__item--treatment {
+    order: 5;
+  }
+
+  .p-home-menu__item--price {
+    order: 3;
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+/*********************************
+  クイックコース 固有スタイル
+*********************************/
+.p-home-menu__item--quick {
+  display: flex;
+  gap: 50px;
+
+  ul {
+    padding: 20px 25px;
+  }
+
+  hr {
+    width: 90%;
+    margin: 0 25px;
+    text-align: left;
+  }
+
+  @include mq(xl) {
+    gap: 30px;
+  }
+
+  @include mq(md) {
+    gap: 0;
+    height: auto;
+
+    ul {
+      padding: 20px 0;
+      margin: 0 25px;
+    }
+  }
+}
+
+.p-home-menu__item-box {
+  width: 100%;
+  max-width: 380px;
+
+  + .p-home-menu__item-box {
+    max-width: 100%; /*2つ目のboxは幅100%*/
+  }
+
+  @include mq(md) {
+    max-width: unset;
+  }
+
+  .p-home-menu__item--price {
+    @include mq(md) {
+      display: none;
+    }
+  }
+}
+
+.p-home-menu__items--quick {
+  width: 100%;
+
+  @include mq(md) {
+    max-width: 590px;
+  }
+}
+
+.p-home-menu__item--treatment--quick {
+  height: auto;
+}
+
+.p-home-menu__item--price-md {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+/******** viewport 767px以下 要素並び替え、borderの切り替え **********/
+@include mq(md) {
+  .p-home-menu__item--quick {
+    flex-direction: column;
+  }
+
+  .p-home-menu__item--recommend {
+    order: 1;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .p-home-menu__item--time {
+    order: 2;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .p-home-menu__toggle {
+    order: 4;
+  }
+
+  .p-home-menu__item--treatment {
+    order: 5;
+  }
+
+  .p-home-menu__item--price-md {
+    order: 3;
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+/*********************************
+  オプション 固有スタイル
+*********************************/
+.p-home-menu__list--option {
+  gap: 30px;
+}
+
+.p-home-menu__items--option {
+  width: calc((100% - 60px) / 3); /*px部分はmargin-rightの合計値を入れる*/
+
+  @include mq(xl) {
+    width: calc((100% - 40px) / 2); /*px部分はmargin-rightの合計値を入れる*/
+  }
+
+  @include mq(md) {
+    width: 100%;
+    max-width: 590px;
+
+    hr {
+        display: none;
+    }
+  }
+
+  .p-home-menu__item--recommend {
+    @include mq(md) {
+      order: 1;
+      border-top: 1px solid $color-border;
+    }
+  }
+
+  .p-home-menu__item--price {
+    @include mq(md) {
+      order: 2;
+      border: none;
+    }
+  }
+}
+
+/*********************************
+  viewport 767px以下 トグルメニュー 
+*********************************/
+.p-home-menu__toggle {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    position: relative;
+    font-size: calc(1.6rem + 8 * (100vw - 320px) / 447); //21px~13pxで可変
+
+    text-align: center;
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    span::before,
+    span::after {
+      display: block;
+      content: "";
+      background-color: $color-text2;
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    span::before {
+      width: 2px;
+      height: 15px;
     }
   }
 }

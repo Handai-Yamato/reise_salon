@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="REISEオンラインショップ 肌の再生力を育む自然派スキンケア。「強く、美しく生まれ変わる力」を引き出すこと。大切なのは、肌本来の再生力" />
+    <meta recommend="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta recommend="description" content="REISEオンラインショップ 肌の再生力を育む自然派スキンケア。「強く、美しく生まれ変わる力」を引き出すこと。大切なのは、肌本来の再生力" />
     <link rel="shortcut icon" href="./asset/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./asset/css/style.min.css" />
     <!-- slick CDN -->
@@ -142,13 +142,14 @@
           <div class=""><img src="./asset/img/home-slide01.jpg" alt="" /></div>
           <div class=""><img src="./asset/img/home-slide02.jpg" alt="" /></div>
         </div>
+        <!-- /.p-home-slider -->
 
         <div class="p-home-about">
           <div class="p-home-about__inner">
             <h2 class="c-heading-2">&minus;&ensp;サロンについて&ensp;&minus;</h2>
             <div class="p-home-about__content">
               <div class="p-home-about__title u-font-serif">
-                REISEを愛するあなたへ<span>まだ見ぬ肌の可能性を<span class="u-inline-block">どこまでも追求しよう</span></span>
+                REISEを愛するあなたへ<span>まだ見ぬ肌の可能性を<br class="u-br-lg" />どこまでも追求しよう</span>
               </div>
               <div class="p-home-about__body">
                 <div class="p-home-about__img"><img src="./asset/img/home-about-img01.jpg" alt="" /></div>
@@ -167,7 +168,7 @@
 
             <div class="p-home-about__content">
               <div class="p-home-about__title u-font-serif">
-                REISEとのストーリーがこれからのあなたへ<span>この出逢い、この感動を<span class="u-inline-block">一生のものに</span></span>
+                REISEとのストーリーがこれからのあなたへ<span>この出逢い、この感動を<br class="u-br-lg" />一生のものに</span>
               </div>
               <div class="p-home-about__body p-home-about__body02">
                 <div class="p-home-about__text">
@@ -188,102 +189,253 @@
         <div class="p-home-menu">
           <div class="p-home-menu__inner">
             <h2 class="c-heading-2">&minus;&ensp;メニュー／料金&ensp;&minus;</h2>
-            <ul class="p-home-menu__list">
-              <li class="p-home-menu__items">
-                <ul class="p-home-menu__item">
-                  <li class="p-home-menu__item--title c-text--lg">REISEのおすすめ（初回はこちらがおすすめ）</li>
-                  <!-- メニュー -->
-                  <ul>
-                    <li><span class="c-text--xs">迷わずこれ&excl;極上卵肌&excl;</span><span class="c-text--lg">（100分）</span></li>
-                    <li class="c-text--xl u-fw-500">メスを使わないリペア術<br />毛穴リセット＆ハリチャージ</li>
-                    <li class="c-text--sm">【RFハイパー&plus;複合波形EMS（炭酸・バイオ付）】</li>
+            <div class="p-home-menu__wrap">
+              <!-- おすすめメニュー -->
+              <ul class="p-home-menu__list">
+                <li class="p-home-menu__items p-home-menu__items--recommend">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">REISEのおすすめ<span class="c-text--sm">（初回はこちらがおすすめ）</span></li>
+                    <!-- メニュー -->
+                    <ul class="p-home-menu__item--menu">
+                      <li><span class="c-text--xs">迷わずこれ&ensp;&excl;&ensp;極上卵肌&ensp;&excl;&ensp;</span><span class="c-text--lg">&ensp;（100分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">メスを使わないリペア術<br />毛穴リセット＆ハリチャージ</li>
+                      <li class="c-text--sm u-mt-10">【RFハイパー&plus;複合波形EMS（炭酸・バイオ付）】</li>
+                    </ul>
+                    <hr class="c-border" />
+                    <!-- 時間 -->
+                    <ul class="p-home-menu__item--time">
+                      <li class="c-text--lg u-fw-500">毛穴リセット&amp;ハリ再構築筋膜小顔<br /><span class="c-text--sm u-fw-400">肌診断&ensp;（10分）&ensp;&plus;&ensp;施術&ensp;（90分）</span></li>
+                    </ul>
+                    <hr class="c-border" />
+                    <!-- <主な施術内容> -->
+                    <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                    <!-- viewport 767px以下で表示-->
+                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-menu is-hidden">
+                      <li>&lt;主な施術内容&gt;</li>
+                      <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
+                      <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
+                      <li>20000PPM炭酸で老化物リセット<br />（W50導入&amp;特殊パルスで深層筋刺激）</li>
+                      <li>炭酸による活性化した肌を深層ほぐし<br />（筋膜ハンドマッサージ＆かっさリンパ）</li>
+                      <li>医療分野素材バイオセルロースパック<br />（変動的EMS促進で深くハリチャージ）</li>
+                      <li>冷感ミストで肌トレーニング<br />（ターンオーバー周期縮小、施術効果長維持）</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul class="p-home-menu__item--price">
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                  <hr class="c-border" />
-                  <!-- 時間 -->
-                  <ul>
-                    <li class="c-text--lg u-fw-500">毛穴リセット&amp;ハリ再構築筋膜小顔<br /><span class="c-text--sm">肌診断（10分）&ensp;&plus;&ensp;施術（90分）</span></li>
+                </li>
+                <li class="p-home-menu__items p-home-menu__items--recommend">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">毛穴が気になる方におすすめ</li>
+                    <!-- メニュー -->
+                    <ul class="p-home-menu__item--menu">
+                      <li><span class="c-text--xs">肌デトックス&ensp;&excl;&ensp;調子底上げ&ensp;&excl;&ensp;</span><span class="c-text--lg">&ensp;（80分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">明るさサポート<br />筋膜運動&plus;毛穴リセット</li>
+                      <li class="c-text--sm u-mt-10">【RF複合波形EMS（炭酸付）】</li>
+                    </ul>
+                    <hr class="c-border" />
+                    <!-- 時間 -->
+                    <ul class="p-home-menu__item--time">
+                      <li class="c-text--lg u-fw-500">透明感&amp;毛穴ケア筋膜小顔<br /><span class="c-text--sm u-fw-400">肌診断&ensp;（10分）&ensp;&plus;&ensp;施術&ensp;（70分）</span></li>
+                    </ul>
+                    <hr class="c-border" />
+                    <!-- <主な施術内容> -->
+                    <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                    <!-- viewport 767px以下で表示-->
+                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-menu is-hidden">
+                      <li>&lt;主な施術内容&gt;</li>
+                      <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
+                      <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
+                      <li>20000PPM炭酸で老化物リセット<br />（W50導入&amp;特殊パルスで深層筋刺激）</li>
+                      <li>炭酸による活性化した肌を深層ほぐし<br />（筋膜ハンドマッサージ＆かっさリンパ）</li>
+                      <li>冷感ミストで肌トレーニング<br />（ターンオーバー周期縮小、施術効果長維持）</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul class="p-home-menu__item--price">
+                      <li class="c-text--lg">9,680円（税込）</li>
+                    </ul>
                   </ul>
-                  <hr class="c-border" />
-                  <!-- <主な施術内容> -->
-                  <ul class="p-home-menu__item--treatment">
-                    <li>&lt;主な施術内容&gt;</li>
-                    <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
-                    <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
-                    <li>20000PPM炭酸で老化物リセット<br />（W50導入&amp;特殊パルスで深層筋刺激）</li>
-                    <li>炭酸による活性化した肌を深層ほぐし<br />（筋膜ハンドマッサージ＆かっさリンパ）</li>
-                    <li>医療分野素材バイオセルロースパック<br />（変動的EMS促進で深くハリチャージ）</li>
-                    <li>冷感ミストで肌トレーニング<br />（ターンオーバー周期縮小、施術効果長維持）</li>
+                </li>
+                <li class="p-home-menu__items p-home-menu__items--recommend">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">乾燥肌が気になる方におすすめ</li>
+                    <!-- メニュー -->
+                    <ul class="p-home-menu__item--menu">
+                      <li><span class="c-text--xs">エイジングの王道&ensp;&excl;&ensp;潤い根付く&ensp;&excl;&ensp;</span>&ensp;（100分）</li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">潤いサポート<br />筋膜ほぐし&plus;ハリチャージ</li>
+                      <li class="c-text--sm u-mt-10">【RFハイパー超音波（バイオ付）】</li>
+                    </ul>
+                    <hr class="c-border" />
+                    <!-- 時間 -->
+                    <ul class="p-home-menu__item--time">
+                      <li class="c-text--lg u-fw-500">ディープ保湿&amp;ハリケア筋膜小顔<br /><span class="c-text--sm u-fw-400">肌診断&ensp;（10分）&ensp;&plus;&ensp;施術&ensp;（70分）</span></li>
+                    </ul>
+                    <hr class="c-border" />
+                    <!-- <主な施術内容> -->
+                    <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                    <!-- viewport 767px以下で表示-->
+                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-menu is-hidden">
+                      <li>&lt;主な施術内容&gt;</li>
+                      <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
+                      <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
+                      <li>サークルRFで肌温度UPして深層ほぐし<br />（筋膜ハンドマッサージ＆かっさリンパ）</li>
+                      <li>医療分野素材バイオセルロースパック<br />（変動的EMS促進で深くハリチャージ）</li>
+                      <li>冷感ミストで肌トレーニング<br />（ターンオーバー周期縮小、施術効果長維持）</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul class="p-home-menu__item--price">
+                      <li class="c-text--lg">9,680円（税込）</li>
+                    </ul>
                   </ul>
-                  <!-- 金額 -->
-                  <hr class="c-border" />
-                  <ul>
-                    <li class="c-text--lg">12,100円（税込）</li>
+                </li>
+              </ul>
+
+              <!-- クイックコース -->
+              <ul class="p-home-menu__list p-home-menu__list--quick">
+                <li class="p-home-menu__items p-home-menu__items--quick">
+                  <ul class="p-home-menu__item--quick">
+                    <div class="p-home-menu__item-box">
+                      <li class="p-home-menu__item--title c-text--lg">お時間がない方におすすめ<span class="c-text--sm">（クイックコース）</span></li>
+                      <!-- メニュー -->
+                      <ul class="p-home-menu__item--recommend">
+                        <li><span class="c-text--xs">サクッと美肌&ensp;&excl;&ensp;</span>&ensp;（60分）</li>
+                        <li class="c-text--xl u-fw-500 u-mt-10">土台サポート<br />筋膜ほぐし&plus;ハリチャージ</li>
+                        <li class="c-text--sm u-mt-10">【RFハイパー超音波（バイオ付）】</li>
+                      </ul>
+                      <hr class="c-border" />
+                      <ul class="p-home-menu__item--price">
+                        <li class="c-text--lg">7,260円（税込）</li>
+                      </ul>
+                    </div>
+
+                    <div class="p-home-menu__item-box">
+                      <!-- 時間 -->
+                      <ul class="p-home-menu__item--time">
+                        <li class="c-text--lg u-fw-500">ハリツヤケア&amp;筋膜小顔<br /><span class="c-text--sm u-fw-400">肌診断&ensp;（10分）&ensp;&plus;&ensp;施術&ensp;（50分）</span></li>
+                      </ul>
+                      <hr class="c-border" />
+                      <!-- 金額 -->
+                      <ul class="p-home-menu__item--price-md">
+                        <li class="c-text--lg">7,260円（税込）</li>
+                      </ul>
+                      <!-- <主な施術内容> -->
+                      <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                      <!-- viewport 767px以下で表示-->
+                      <ul class="p-home-menu__item--treatment p-home-menu__item--treatment--quick c-text--sm js-toggle-menu is-hidden">
+                        <li>&lt;主な施術内容&gt;</li>
+                        <li>角質まで分析できる肌診断で徹底肌分析からスタート</li>
+                        <li>REISEオリジナルDEEPオフケア<span class="u-inline-block">（オゾンスチーマでニキビながらケア）</span></li>
+                        <li>[クイック]サークルRFで肌温度UPして深層ほぐし<span class="u-inline-block">（筋膜ハンドマッサージ＆かっさリンパ）</span></li>
+                        <li>[クイック]医療分野素材バイオセルロースパック<span class="u-inline-block">（変動的EMS促進で深くハリチャージ）</span></li>
+                      </ul>
+                    </div>
                   </ul>
-                </ul>
-              </li>
-              <li class="p-home-menu__items">
-                <ul class="p-home-menu__item">
-                  <li class="p-home-menu__item--title c-text--lg">毛穴が気になる方におすすめ</li>
-                  <!-- メニュー -->
-                  <ul>
-                    <li><span class="c-text--xs">肌デトックス&excl;調子底上げ&excl;</span><span class="c-text--lg">（80分）</span></li>
-                    <li class="c-text--xl u-fw-500">明るさサポート<br />筋膜運動&plus;毛穴リセット</li>
-                    <li class="c-text--sm">【RF複合波形EMS（炭酸付）】</li>
+                </li>
+              </ul>
+
+              <!-- オプション -->
+              <ul class="p-home-menu__list p-home-menu__list--option">
+                <li class="p-home-menu__items p-home-menu__items--option">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">オプション</li>
+                    <!-- メニュー -->
+                    <ul class="p-home-menu__item--recommend">
+                      <li><span class="c-text--xs">小鼻・黒ずみディップクレンザー</span><span class="c-text--lg">&ensp;（15分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">毛穴レスディップクリア</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul class="p-home-menu__item--price">
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                  <hr class="c-border" />
-                  <!-- 時間 -->
-                  <ul>
-                    <li class="c-text--lg u-fw-500">透明感&amp;毛穴ケア筋膜小顔<br /><span class="c-text--sm">肌診断（10分）&ensp;&plus;&ensp;施術（70分）</span></li>
+                </li>
+
+                <li class="p-home-menu__items p-home-menu__items--option">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">オプション</li>
+                    <!-- メニュー -->
+                    <ul>
+                      <li><span class="c-text--xs">小鼻・黒ずみディップクレンザー</span><span class="c-text--lg">&ensp;（15分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">毛穴レスディップクリア</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul>
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                  <hr class="c-border" />
-                  <!-- <主な施術内容> -->
-                  <ul class="p-home-menu__item--treatment">
-                    <li>&lt;主な施術内容&gt;</li>
-                    <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
-                    <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
-                    <li>20000PPM炭酸で老化物リセット<br />（W50導入&amp;特殊パルスで深層筋刺激）</li>
-                    <li>炭酸による活性化した肌を深層ほぐし<br />（筋膜ハンドマッサージ＆かっさリンパ）</li>
-                    <li>冷感ミストで肌トレーニング<br />（ターンオーバー周期縮小、施術効果長維持）</li>
+                </li>
+
+                <li class="p-home-menu__items p-home-menu__items--option">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">オプション</li>
+                    <!-- メニュー -->
+                    <ul>
+                      <li><span class="c-text--xs">小鼻・黒ずみディップクレンザー</span><span class="c-text--lg">&ensp;（15分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">毛穴レスディップクリア</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul>
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                  <!-- 金額 -->
-                  <hr class="c-border" />
-                  <ul>
-                    <li class="c-text--lg">9,680円（税込）</li>
+                </li>
+
+                <li class="p-home-menu__items p-home-menu__items--option">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">オプション</li>
+                    <!-- メニュー -->
+                    <ul>
+                      <li><span class="c-text--xs">小鼻・黒ずみディップクレンザー</span><span class="c-text--lg">&ensp;（15分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">毛穴レスディップクリア</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul>
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                </ul>
-              </li>
-              <li class="p-home-menu__items">
-                <ul class="p-home-menu__item">
-                  <li class="p-home-menu__item--title c-text--lg">乾燥肌が気になる方におすすめ</li>
-                  <!-- メニュー -->
-                  <ul>
-                    <li><span class="c-text--xs">エイジングの王道&excl;潤い根付く&excl;</span>（100分）</li>
-                    <li class="c-text--xl u-fw-500">潤いサポート<br />筋膜ほぐし&plus;ハリチャージ</li>
-                    <li class="c-text--sm">【RFハイパー超音波（バイオ付）】</li>
+                </li>
+
+                <li class="p-home-menu__items p-home-menu__items--option">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">オプション</li>
+                    <!-- メニュー -->
+                    <ul>
+                      <li><span class="c-text--xs">小鼻・黒ずみディップクレンザー</span><span class="c-text--lg">&ensp;（15分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">毛穴レスディップクリア</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul>
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                  <hr class="c-border" />
-                  <!-- 時間 -->
-                  <ul>
-                    <li class="c-text--lg u-fw-500">ディープ保湿&amp;ハリケア筋膜小顔<br /><span class="c-text--sm">肌診断（10分）&ensp;&plus;&ensp;施術（70分）</span></li>
+                </li>
+
+                <li class="p-home-menu__items p-home-menu__items--option">
+                  <ul class="p-home-menu__item">
+                    <li class="p-home-menu__item--title c-text--lg">オプション</li>
+                    <!-- メニュー -->
+                    <ul>
+                      <li><span class="c-text--xs">小鼻・黒ずみディップクレンザー</span><span class="c-text--lg">&ensp;（15分）</span></li>
+                      <li class="c-text--xl u-fw-500 u-mt-10">毛穴レスディップクリア</li>
+                    </ul>
+                    <!-- 金額 -->
+                    <hr class="c-border" />
+                    <ul>
+                      <li class="c-text--lg">12,100円（税込）</li>
+                    </ul>
                   </ul>
-                  <hr class="c-border" />
-                  <!-- <主な施術内容> -->
-                  <ul class="p-home-menu__item--treatment">
-                    <li>&lt;主な施術内容&gt;</li>
-                    <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
-                    <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
-                    <li>サークルRFで肌温度UPして深層ほぐし<br />（筋膜ハンドマッサージ＆かっさリンパ）</li>
-                    <li>医療分野素材バイオセルロースパック<br />（変動的EMS促進で深くハリチャージ）</li>
-                    <li>冷感ミストで肌トレーニング<br />（ターンオーバー周期縮小、施術効果長維持）</li>
-                  </ul>
-                  <!-- 金額 -->
-                  <hr class="c-border" />
-                  <ul>
-                    <li class="c-text--lg">9,680円（税込）</li>
-                  </ul>
-                </ul>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- /.p-home-menu -->

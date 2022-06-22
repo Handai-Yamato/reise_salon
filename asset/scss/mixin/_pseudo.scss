@@ -1,14 +1,14 @@
 // 疑似要素
-@mixin pseudo($content: '', $position: absolute, $display: block) {
-    position: $position;
-    display: $display;
-    content: $content;
+@mixin pseudo($content: "", $position: absolute, $display: block) {
+  position: $position;
+  display: $display;
+  content: $content;
 }
 
 // 疑似要素（アイコン）
 @mixin icon($fileName, $width, $height) {
-	background: url($path_img + $fileName) no-repeat 50% 50%;
-	background-size: $width $height;
-	width: $width;
-	height: $height;
+  background: url($path_img + $fileName) no-repeat 50% 50%;
+  background-size: $width $height;
+  width: $width;
+  height: $height;
 }

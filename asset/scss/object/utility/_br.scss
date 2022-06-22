@@ -1,0 +1,10 @@
+@use "../../mixin" as *;
+
+
+.u-br-lg {
+    display: none;
+
+    @include mq(lg) {
+        display: block;
+    }
+}
