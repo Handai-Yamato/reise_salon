@@ -1,0 +1,126 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-privilege {
+  background: $color-background2;
+}
+
+.p-home-privilege__inner {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include mq(lg) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-home-privilege__title {
+  text-align: center;
+
+  & + p {
+    margin-top: 50px;
+    span {
+      margin-left: 30px;
+    }
+  }
+}
+
+.p-home-privilege__table {
+  width: 100%;
+  text-align: center;
+
+  @include mq(lg) {
+    display: none;
+  }
+
+  /* 2行目以降にborder-leftを指定 */
+  th + th,
+  td + td {
+    border-left: 1px solid $color-text3;
+  }
+
+  /* 1列目見出しの幅は330pxで可変、2列目以降は等間隔で可変 */
+  th + th {
+    width: calc(100% - 330px);
+  }
+
+  /* 3行目からにborder-topを指定 */
+  tr:nth-child(n + 3) td {
+    border-top: 1px solid $color-text3;
+  }
+
+  /* n番目のborder-topを破線にする */
+  tr:nth-child(5) td,
+  tr:nth-child(7) td,
+  tr:nth-child(9) td,
+  tr:nth-child(11) td {
+    border-top: 1px dashed $color-text3;
+  }
+
+  tr {
+    position: relative;
+  }
+
+  th {
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: $color-privilege-accent;
+    font-weight: 400;
+  }
+
+  th span {
+    display: block;
+  }
+
+  td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #fff;
+    color: $color-accent3;
+    margin-right: auto;
+  }
+}
+
+.p-home-privilege__present {
+  position: relative;
+    padding-left: 190px;
+    text-align: left;
+
+  &::before {
+    @include pseudo("プレゼント");
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: $color-privilege-accent;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.8rem;
+    border-radius: 15px;
+    padding: 7px 26px;
+  }
+}
+
+.p-home-privilege__example {
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  margin-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+
+  p {
+    display: inline-block;
+    text-align: left;
+    position: relative;
+  }
+
+  p::before {
+    @include pseudo("＜例＞");
+    left: -70px;
+  }
+}

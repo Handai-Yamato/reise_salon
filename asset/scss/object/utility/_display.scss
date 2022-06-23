@@ -1,0 +1,30 @@
+@use "../../mixin" as *;
+
+.u-d-block {
+    display: block;
+}
+
+.u-d-inline-block {
+    display: inline-block;
+}
+
+.u-d-none {
+    display: none;
+}
+
+
+/********   レスポンシブ **********/
+.u-md-d-none {
+    display: block;
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.u-md-d-block {
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
+}
+    

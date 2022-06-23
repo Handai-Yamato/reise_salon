@@ -1,0 +1,98 @@
+@use "../../mixin" as *;
+@use "../../setting" as *;
+
+.c-button-reserve {
+  margin-top: 15px;
+  position: relative;
+  width: 125px;
+  margin-left: auto;
+  font-size: 12px;
+
+  /*arrowアイコンを配置*/
+  a {
+    position: relative;
+    color: $color-text2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      background: url(../img/home-menu-arrow.svg);
+      width: 15px;
+      height: 15px;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  /*hover時に下線をひく*/
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 86%;
+    height: 1px;
+    background: $color-menu-accent;
+    bottom: -1px; /*アンダーラインがaタグの下端から現れる*/
+    transform: scale(0, 1); /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+    transition: transform 0.3s; /*変形の時間*/
+  }
+
+  &:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+  }
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.c-button-reserve--md {
+  display: none;
+  @include mq(md) {
+    display: block;
+    margin-top: -15px;
+    position: relative;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+
+    /*arrowアイコンを配置*/
+    a {
+      position: relative;
+      color: $color-text2;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        background: url(../img/home-menu-arrow.svg);
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: 90%;
+      height: 1px;
+      background: $color-menu-accent;
+      bottom: -1px; /*アンダーラインがaタグの下端から現れる*/
+      transform: scale(0, 1); /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+      transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+      transition: transform 0.3s; /*変形の時間*/
+    }
+
+    &:hover::after {
+      transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+    }
+  }
+}

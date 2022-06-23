@@ -1,9 +1,6 @@
 @use "../../mixin" as *;
 @use "../../setting" as *;
 
-/*********************************
-	共通
-*********************************/
 .c-text--xxl {
   font-size: 2.4rem;
 }
@@ -39,4 +36,8 @@
   @include mq(md) {
     font-size: calc(1.2rem + 6 * (100vw - 320px) / 447); //18px~12pxで可変
   }
+}
+
+.c-text-accent1 {
+  color: $color-accent1;
 }

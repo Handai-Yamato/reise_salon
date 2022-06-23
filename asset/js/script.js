@@ -58,3 +58,29 @@ $(function () {
     pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
   });
 });
+
+
+// for(var n=1;n<=2;n++){
+//   //----] <td> を取得
+//   var td = document.querySelectorAll( ".js-table td:nth-child("+n+")" );
+//   //----] <td> の設定
+//   for(var i=0;i<td.length;i++){
+//   //----]----] スタイルシート
+//   td[ i ].style.textAlign = "center";
+//   //----]----] 中身を <span> で囲う
+//   td[ i ].innerHTML = ""
+//   + "<span style='display:inline-block; text-align:"+( n==1 ? "left" : "right" )+";'>"
+//   + td[ i ].innerHTML
+//   + "</span>";
+//   }
+//   //----] <span> を取得
+//   var span = document.querySelectorAll( ".js-table tr td:nth-child("+n+") > span" );
+//   //----] <span> を最大幅に揃える
+//   var maxw = 0;
+//   for(var i=0;i<span.length;i++){
+//   if( span[ i ].offsetWidth>maxw ){ maxw = span[ i ].offsetWidth }
+//   }
+//   for(var i=0;i<span.length;i++){
+//   span[ i ].style.width = maxw+"px";
+//   }
+//   }

@@ -1,0 +1,41 @@
+@use "../../mixin" as *;
+@use "../../setting" as *;
+
+//margin-top
+.u-mt-10 {
+  margin-top: 10px;
+}
+
+.u-mt-20 {
+  margin-top: 20px;
+}
+
+.u-mt-30 {
+  margin-top: 30px;
+}
+
+//margin-right
+.u-xl-mr-20 {
+  margin-right: 20px;
+
+  @include mq(xl) {
+    display: none;
+  }
+}
+
+.u-lg-mr-10 {
+  margin-right: 10px;
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+//margin-left
+.u-md-ml-10 {
+  margin-left: 10px;
+
+  @include mq(md) {
+    display: none;
+  }
+}
