@@ -24,20 +24,17 @@ mask.addEventListener("click", function () {
 /*********************************
 	トグルメニュー
 *********************************/
-/*--------------------------------
-	ヘッダー
---------------------------------*/
-
 /******** 要素を取得 **********/
 const toggle = document.querySelectorAll(".js-toggle");
 const menu = document.querySelectorAll(".js-toggle-menu");
+// const toggleText = document.querySelectorAll(".js-toggle-text");
 
 /******** js-toggleをクリックするとトグルメニューが追加 ※複数要素にイベントを発生させる場合 **********/
 for (let i = 0; i < toggle.length; i++) {
   toggle[i].onclick = function (e) {
     toggle[i].classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
     menu[i].classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
-
+    // toggleText[i].innerText = "閉じる";
   };
 }
 
@@ -59,28 +56,3 @@ $(function () {
   });
 });
 
-
-// for(var n=1;n<=2;n++){
-//   //----] <td> を取得
-//   var td = document.querySelectorAll( ".js-table td:nth-child("+n+")" );
-//   //----] <td> の設定
-//   for(var i=0;i<td.length;i++){
-//   //----]----] スタイルシート
-//   td[ i ].style.textAlign = "center";
-//   //----]----] 中身を <span> で囲う
-//   td[ i ].innerHTML = ""
-//   + "<span style='display:inline-block; text-align:"+( n==1 ? "left" : "right" )+";'>"
-//   + td[ i ].innerHTML
-//   + "</span>";
-//   }
-//   //----] <span> を取得
-//   var span = document.querySelectorAll( ".js-table tr td:nth-child("+n+") > span" );
-//   //----] <span> を最大幅に揃える
-//   var maxw = 0;
-//   for(var i=0;i<span.length;i++){
-//   if( span[ i ].offsetWidth>maxw ){ maxw = span[ i ].offsetWidth }
-//   }
-//   for(var i=0;i<span.length;i++){
-//   span[ i ].style.width = maxw+"px";
-//   }
-//   }

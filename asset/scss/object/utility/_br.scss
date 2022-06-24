@@ -1,10 +1,17 @@
 @use "../../mixin" as *;
 
-
 .u-br-lg {
-    display: none;
+  display: none;
 
-    @include mq(lg) {
-        display: block;
-    }
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.u-br-md {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
 }

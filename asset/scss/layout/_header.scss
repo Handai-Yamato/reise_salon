@@ -9,6 +9,7 @@
   position: sticky;
   z-index: index($elements, l-header);
   top: 0;
+  width: 100vw;
 }
 
 .l-header__inner {
@@ -18,6 +19,10 @@
   align-items: center;
   max-width: 1920px;
   margin: 0 auto;
+
+  @include mq(tab) {
+    padding: 25px 3%;
+  }
 }
 
 .l-header__gnav {

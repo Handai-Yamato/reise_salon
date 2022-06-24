@@ -1,0 +1,66 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-access__inner {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  @include mq(xl) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-home-access__sub-title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.p-home-access__content {
+  padding-top: 40px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(xl) {
+    justify-content: space-around;
+  }
+}
+
+.p-home-access__text {
+  max-height: 520px;
+
+  p + span {
+    line-height: 1.714;
+  }
+
+  /* 2つ目以降のp要素にmargin-topを指定 */
+  p + p {
+    margin-top: 7px;
+  }
+
+}
+
+.p-home-access__gmap {
+  position: relative;
+  width: 100%;
+  max-width: 535px;
+  height: 0;
+  padding-top: 50.74%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
