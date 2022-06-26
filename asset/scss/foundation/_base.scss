@@ -51,6 +51,7 @@ object {
 a {
   text-decoration: none;
   transition: 0.4s;
+  color: inherit;
 
   &:hover {
     cursor: pointer;

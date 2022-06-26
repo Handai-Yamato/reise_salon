@@ -2,13 +2,21 @@
 @use "../../setting" as *;
 
 .u-text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .u-text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .u-text-center {
-    text-align: center;
+  text-align: center;
+}
+
+.u-text-accent1 {
+  color: $color-accent1;
+}
+
+.u-text-accent2 {
+  color: $color-accent2;
 }

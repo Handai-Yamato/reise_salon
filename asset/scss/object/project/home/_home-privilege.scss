@@ -146,7 +146,6 @@
 .p-home-privilege__present {
   position: relative;
   padding-left: 190px;
-  padding-right: 3%;
   text-align: left;
 
   &::before {
@@ -224,11 +223,8 @@
 }
 
 .p-home-privilege__sns-box {
-  background: #fff;
   width: 100%;
   max-width: 450px;
-  text-align: center;
-  padding: 30px 3%;
 
   @include mq(md) {
     max-width: 650px;

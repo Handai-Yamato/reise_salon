@@ -20,7 +20,7 @@
   max-width: 1920px;
   margin: 0 auto;
 
-  @include mq(tab) {
+  @include mq(lg) {
     padding: 25px 3%;
   }
 }
@@ -176,8 +176,8 @@
 
   @include mq(md) {
     display: block;
-    height: 750px;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
+    height: 1020px;
   }
 }
 

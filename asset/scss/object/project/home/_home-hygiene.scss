@@ -1,0 +1,49 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+
+.p-home-hygiene__inner {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(xl) {
+        padding-right: 5%;
+        padding-left: 5%;
+
+    }
+
+    @include mq(lg) {
+        max-width: unset;
+    }
+  
+}
+
+.p-home-hygiene__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 80px;
+
+    @include mq(xl) {
+        gap: 40px;
+    }
+
+    @include mq(lg) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 665px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.p-home-hygiene__img {
+    @include mq(lg) {
+        width: 665px;
+    }
+}

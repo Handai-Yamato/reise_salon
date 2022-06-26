@@ -1,0 +1,142 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-reserve {
+  background: $color-background2;
+  color: $color-text2;
+  letter-spacing: 0.05em;
+}
+
+.p-home-reserve__inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  @include mq(xl) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-home-reserve__title {
+  text-align: center;
+}
+
+.p-home-reserve__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.p-home-reserve__line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 900px;
+
+  &-link {
+    background: $color-background2;
+    padding: 30px 20px;
+    max-width: 175px;
+    max-height: 165px;
+
+    @include mq(xl) {
+      width: 300px;
+    }
+
+    @include mq(md) {
+      width: 50%;
+      max-width: unset;
+      max-height: unset;
+      min-width: 200px;
+      display: table;
+
+      a {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include mq(xl) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  @include mq(lg) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.p-home-reserve__line-text {
+  font-size: 3.6rem;
+  display: inline-block;
+  text-align: left;
+
+  @include mq(lg) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.p-home-reserve__tel,
+.p-home-reserve__form {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(xl) {
+    max-width: calc(50% - 25px);
+  }
+
+  @include mq(md) {
+    max-width: unset;
+  }
+}
+
+.p-home-reserve__tel {
+  img {
+    width: 40px;
+  }
+
+  img + p {
+    font-size: 2.8rem;
+  }
+
+  @include mq(md) {
+    img + p {
+      font-size: calc(2.4rem + 18 * (100vw - 575px) / 192);
+    }
+  }
+
+  @include mq(sm) {
+    img + p {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.p-home-reserve__form {
+  img {
+    width: 40px;
+  }
+}
