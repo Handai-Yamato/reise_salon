@@ -1,5 +1,69 @@
-@use "../setting" as s;
-@use "../mixin" as m;
+@use "../setting" as *;
+@use "../mixin" as *;
 
+.l-footer {
+  @include bg-image-jpg($filename: footer-bg);
+  background-size: cover;
+  height: 1000px;
+  color: #ffff;
+}
 
+.l-footer__inner {
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 450px;
+}
 
+.l-footer__sns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @include mq(lg) {
+    gap: 30px;
+
+    a img {
+      display: inline-block;
+      width: 40px;
+    }
+  }
+}
+
+.l-footer__logo {
+  text-align: center;
+  margin-top: 170px;
+
+  @include mq(lg) {
+    img {
+        width: 320px;
+    }
+  }
+}
+
+.l-footer__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.l-footer__item {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.l-footer__item + .l-footer__item {
+  border-left: 1px solid #ffff;
+}
+
+.l-footer__copyright {
+  text-align: center;
+
+  @include mq(lg) {
+    font-size: 1.4rem;
+  }
+}

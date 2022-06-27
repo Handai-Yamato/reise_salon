@@ -385,7 +385,7 @@ a:hover img {
 
 a:hover {
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.7;
   transition: all 0.3s;
 }
 
@@ -482,6 +482,7 @@ a:visited {
   margin: 0 auto;
   z-index: 3;
   text-align: center;
+  overflow: auto;
 }
 @media (max-width: 767px) {
   .l-header__modal-menu {
@@ -551,11 +552,11 @@ a:visited {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: left;
   font-size: 1.8rem;
   height: 370px;
-  overflow: scroll;
+  overflow: auto;
 }
 .l-header__modal-lists a {
   color: inherit;
@@ -564,7 +565,7 @@ a:visited {
   .l-header__modal-lists {
     display: block;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447);
-    height: 1020px;
+    height: 940px;
   }
 }
 
@@ -576,7 +577,7 @@ a:visited {
   width: 85%;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   color: #ffffff;
   background: #808080;
   font-size: 2.4rem;
@@ -647,13 +648,14 @@ a:visited {
 }
 @media (max-width: 767px) {
   .l-header__modal-copyright {
+    text-align: left;
     order: 3;
     margin-top: 60px;
   }
 }
 
 /*********************************
-	モーダルのトグルメニューの設定
+	モーダル内のトグルメニューの設定
 *********************************/
 .l-header__modal-list {
   list-style-type: none;
@@ -664,72 +666,6 @@ a:visited {
 .l-header__modal-list dd ul li {
   margin-top: 10px;
   margin-left: 20px;
-}
-
-.l-header__modal-item--category {
-  position: relative;
-}
-.l-header__modal-item--category span {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: block;
-  width: 24px;
-  height: 24px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.l-header__modal-item--category span::before,
-.l-header__modal-item--category span::after {
-  display: block;
-  content: "";
-  background-color: #808080;
-  position: absolute;
-  width: 15px;
-  height: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.l-header__modal-item--category span::before {
-  width: 2px;
-  height: 15px;
-}
-
-.l-header__modal-item--lineup {
-  position: relative;
-}
-.l-header__modal-item--lineup span {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: block;
-  width: 24px;
-  height: 24px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.l-header__modal-item--lineup span::before,
-.l-header__modal-item--lineup span::after {
-  display: block;
-  content: "";
-  background-color: #808080;
-  position: absolute;
-  width: 15px;
-  height: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.l-header__modal-item--lineup span::before {
-  width: 2px;
-  height: 15px;
 }
 
 .l-header__modal-item ~ .l-header__modal-item {
@@ -773,12 +709,92 @@ a:visited {
   margin: 0 auto;
 }
 
+.l-footer {
+  background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-size: cover;
+  height: 1000px;
+  color: #ffff;
+}
+
+.l-footer__inner {
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 450px;
+}
+
+.l-footer__sns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .l-footer__sns {
+    gap: 30px;
+  }
+  .l-footer__sns a img {
+    display: inline-block;
+    width: 40px;
+  }
+}
+
+.l-footer__logo {
+  text-align: center;
+  margin-top: 170px;
+}
+@media (max-width: 1024px) {
+  .l-footer__logo img {
+    width: 320px;
+  }
+}
+
+.l-footer__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .l-footer__list {
+    display: none;
+  }
+}
+
+.l-footer__item {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.l-footer__item + .l-footer__item {
+  border-left: 1px solid #ffff;
+}
+
+.l-footer__copyright {
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .l-footer__copyright {
+    font-size: 1.4rem;
+  }
+}
+
 .c-border {
   border-top: 1px solid #d1d1d1;
 }
 
 .c-copyright {
   font-size: 10px;
+}
+@media (max-width: 767px) {
+  .c-copyright {
+    font-size: calc(1rem + 5 * (100vw - 575px) / 192);
+  }
+}
+@media (max-width: 767px) {
+  .c-copyright {
+    font-size: 1rem;
+  }
 }
 
 .c-text--xxl {
@@ -1034,8 +1050,60 @@ a:visited {
   display: none;
 }
 
-/******** 常に表示 **********/
-.js-toggle-menu.is-hidden {
+/******** アイコンの+と× **********/
+.js-toggle.is-show {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+}
+.js-toggle.is-show:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.js-toggle.is-show::before,
+.js-toggle.is-show::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #808080;
+}
+
+.js-toggle.is-show::before {
+  top: 48%;
+  right: 25px;
+  transform: rotate(0deg);
+}
+@media (max-width: 767px) {
+  .js-toggle.is-show::before {
+    right: 13%;
+  }
+}
+
+.js-toggle.is-show::after {
+  top: 48%;
+  right: 25px;
+  transform: rotate(90deg);
+}
+@media (max-width: 767px) {
+  .js-toggle.is-show::after {
+    right: 13%;
+  }
+}
+
+.js-toggle.is-show-done::before {
+  transform: rotate(45deg);
+}
+
+.js-toggle.is-show-done::after {
+  transform: rotate(-45deg);
+}
+
+/******** クリックされたら表示されるエリア **********/
+.js-toggle-content {
   display: none;
 }
 
@@ -1085,6 +1153,11 @@ a:visited {
 @media (max-width: 767px) {
   .p-home-top {
     height: 1100px;
+  }
+}
+@media (max-width: 575px) {
+  .p-home-top {
+    height: 850px;
   }
 }
 
@@ -1378,6 +1451,7 @@ a:visited {
   height: 425px;
   list-style: none;
   text-align: left;
+  display: block;
 }
 .p-home-menu__item--treatment li ~ li {
   margin-top: 10px;
@@ -1406,6 +1480,7 @@ a:visited {
   .p-home-menu__item--treatment {
     height: auto;
     margin-top: -20px;
+    display: none;
   }
 }
 
@@ -1428,12 +1503,12 @@ a:visited {
 *********************************/
 .p-home-menu__items--recommend {
   width: calc((100% - 60px) / 3);
-  /*px部分はmargin-rightの合計値を入れる*/
+  /*px部分はmargin-rightの合計値*/
 }
 @media (max-width: 1199px) {
   .p-home-menu__items--recommend {
     width: calc((100% - 30px) / 2);
-    /*px部分はmargin-rightの合計値を入れる*/
+    /*px部分はmargin-rightの合計値*/
   }
 }
 @media (max-width: 767px) {
@@ -1709,7 +1784,7 @@ a:visited {
   }
 }
 
-/******** viewport 1025px以上で表示 **********/
+/******** viewport 769px以上で表示 **********/
 .p-home-privilege__table {
   width: 100%;
   text-align: center;
@@ -1765,7 +1840,7 @@ a:visited {
   margin-right: auto;
 }
 
-/******** viewport 1024px以下で表示 **********/
+/******** viewport 768px以下で表示 **********/
 .p-home-privilege__table--lg {
   display: none;
 }
@@ -1783,23 +1858,45 @@ a:visited {
   }
   .p-home-privilege__table--lg th,
 .p-home-privilege__table--lg td {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding: 3%;
   }
-  .p-home-privilege__table--lg th + td {
+  .p-home-privilege__table--lg tr th + td,
+.p-home-privilege__table--lg tr td + td {
     border-left: 1px solid #ad9670;
   }
   .p-home-privilege__table--lg tr + tr td {
     border-top: 1px solid #ad9670;
   }
+  .p-home-privilege__table--lg tr:nth-child(n+3) td + td {
+    font-size: calc(1.7rem + 10 * (100vw - 575px) / 192);
+  }
+}
+@media (max-width: 767px) and (max-width: 575px) {
+  .p-home-privilege__table--lg tr:nth-child(n+3) td + td {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 767px) {
   .p-home-privilege__table--lg th {
     color: #fff;
     background: #d6cab7;
     font-weight: 400;
   }
+}
+@media (max-width: 767px) {
   .p-home-privilege__table--lg td {
     background: #fff;
   }
+}
+.p-home-privilege__table--lg .p-home-privilege__present--md {
+  background: #d6cab7;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  padding: 3px 26px;
+  max-width: 145px;
+  width: 100%;
 }
 
 .p-home-privilege__present {
@@ -2306,6 +2403,18 @@ a:visited {
   }
 }
 
+.u-ml-10 {
+  margin-left: 10px;
+}
+
+.u-ml-20 {
+  margin-left: 20px;
+}
+
+.u-ml-60 {
+  margin-left: 60px;
+}
+
 .u-md-ml-10 {
   margin-left: 10px;
 }
@@ -2313,6 +2422,10 @@ a:visited {
   .u-md-ml-10 {
     display: none;
   }
+}
+
+.u-mb-10 {
+  margin-bottom: 10px;
 }
 
 .u-text-right {
@@ -2333,5 +2446,9 @@ a:visited {
 
 .u-text-accent2 {
   color: #00b900;
+}
+
+.u-pt-30 {
+  padding-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

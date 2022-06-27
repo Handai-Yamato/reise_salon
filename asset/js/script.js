@@ -24,20 +24,19 @@ mask.addEventListener("click", function () {
 /*********************************
 	トグルメニュー
 *********************************/
-/******** 要素を取得 **********/
-const toggle = document.querySelectorAll(".js-toggle");
-const menu = document.querySelectorAll(".js-toggle-menu");
-// const toggleText = document.querySelectorAll(".js-toggle-text");
-
-/******** js-toggleをクリックするとトグルメニューが追加 ※複数要素にイベントを発生させる場合 **********/
-for (let i = 0; i < toggle.length; i++) {
-  toggle[i].onclick = function (e) {
-    toggle[i].classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
-    menu[i].classList.toggle("is-hidden"); //is-hiddenクラスを付与、削除
-    // toggleText[i].innerText = "閉じる";
-  };
-}
-
+//クリックした時の動作
+$('.js-toggle').on('click', function() {//タイトル要素をクリックしたら
+  const findParent = $(this).parents(".js-toggle-parent")
+  const findElm = $(findParent).find(".js-toggle-content");//直後のアコーディオンを行うエリアを取得し
+  
+  $(findElm).stop().fadeToggle(300)
+    
+  if($(this).hasClass('is-show-done')){//タイトル要素にクラス名is-show-doneがあれば
+    $(this).removeClass('is-show-done');//クラス名を除去し
+  }else{//それ以外は
+    $(this).addClass('is-show-done');//クラス名is-show-doneを付与
+  }
+});
 
 /*********************************
 	スライダー

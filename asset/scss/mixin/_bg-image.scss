@@ -4,7 +4,7 @@
   background-position: center center;
 }
 
-// @include bg-image($filename:home_top);
+// @include bg-image-jpg($filename:home_top);
 
 @mixin bg-image-png($filename) {
   background-image: url("../img/#{$filename}.png");

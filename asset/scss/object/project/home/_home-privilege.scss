@@ -39,7 +39,7 @@
   }
 }
 
-/******** viewport 1025px以上で表示 **********/
+/******** viewport 769px以上で表示 **********/
 .p-home-privilege__table {
   width: 100%;
   text-align: center;
@@ -102,7 +102,7 @@
   }
 }
 
-/******** viewport 1024px以下で表示 **********/
+/******** viewport 768px以下で表示 **********/
 .p-home-privilege__table--lg {
   display: none;
 
@@ -117,18 +117,28 @@
 
     th,
     td {
-      padding-top: 3%;
-      padding-bottom: 3%;
+      padding: 3%;
     }
 
     /* 2列目以降にborder-leftを指定 */
-    th + td {
+    tr th + td,
+    tr td + td {
       border-left: 1px solid $color-text3;
     }
 
     /* 2行目にborder-topを指定 */
     tr + tr td {
       border-top: 1px solid $color-text3;
+    }
+
+    tr:nth-child(n + 3) {
+      td + td {
+        font-size: calc(1.7rem + 10 * (100vw - 575px) / 192); //27px~19pxで可変
+
+        @include mq(sm) {
+          font-size: 1.7rem;
+        }
+      }
     }
 
     th {
@@ -141,7 +151,20 @@
       background: #fff;
     }
   }
+
+  .p-home-privilege__present--md {
+    background: $color-privilege-accent;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.8rem;
+    border-radius: 15px;
+    padding: 3px 26px;
+    max-width: 145px;
+    width: 100%;
+  }
 }
+
+
 
 .p-home-privilege__present {
   position: relative;

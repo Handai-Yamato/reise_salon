@@ -6,7 +6,7 @@
     <meta recommend="viewport" content="width=device-width, initial-scale=1.0" />
     <meta recommend="description" content="REISEオンラインショップ 肌の再生力を育む自然派スキンケア。「強く、美しく生まれ変わる力」を引き出すこと。大切なのは、肌本来の再生力" />
     <link rel="shortcut icon" href="./asset/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./asset/css/style.min.css?ver.1.05" />
+    <link rel="stylesheet" href="./asset/css/style.min.css?ver.1.0.6" />
     <!-- slick CDN -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Google icon Outlined -->
@@ -22,7 +22,20 @@
         <nav class="l-header__gnav">
           <ul class="l-header__list">
             <li class="l-header__item"><a href="">MESSAGE</a></li>
-            <li class="l-header__item"><a href="">PRODUCTS</a></li>
+            <li class="l-header__item">
+              <a href="">PRODUCTS</a>
+              <ul class="l-header__mega-menu">
+                <li>基礎ケア
+                  <ul class="l-header-mega-menu__item">
+                    
+                  </ul>
+                </li>
+                <li>スペシャルケア</li>
+                <li>プラスケア</li>
+                <li>UVケア</li>
+                <li>サロンギフトチケット</li>
+              </ul>
+            </li>
             <li class="l-header__item"><a href="">SUBSCRIPTION</a></li>
             <li class="l-header__item">
               <a href="">SALON<span>&#12304;NEW&#12305;</span></a>
@@ -48,9 +61,9 @@
                 <ul class="l-header__modal-list">
                   <li class="l-header__modal-item"><a href="https://reise-skin.com/">TOP</a></li>
 
-                  <li class="l-header__modal-item">
-                    <div class="l-header__modal-item--category"><a href="">カテゴリー</a><span class="js-toggle"></span></div>
-                    <dd class="js-toggle-menu is-hidden">
+                  <li class="l-header__modal-item js-toggle-parent">
+                    <div class="l-header__modal-item js-toggle is-show">カテゴリー</div>
+                    <dd class="js-toggle-content">
                       <ul>
                         <li><a href="">メイク落とし</a></li>
                         <li><a href="">洗顔料</a></li>
@@ -65,9 +78,9 @@
                     </dd>
                   </li>
 
-                  <li class="l-header__modal-item">
-                    <div class="l-header__modal-item--lineup"><a href="">ラインナップ</a><span class="js-toggle"></span></div>
-                    <dd class="js-toggle-menu is-hidden">
+                  <li class="l-header__modal-item js-toggle-parent">
+                    <div class="l-header__modal-item js-toggle is-show">ラインナップ</div>
+                    <dd class="js-toggle-content">
                       <ul>
                         <li><a href="">基礎ケア</a></li>
                         <li><a href="">スペシャルケア</a></li>
@@ -103,10 +116,10 @@
             </div>
 
             <div class="l-header__modal-sns">
-              <a href=""><img src="./asset/img/header-line.svg" alt="" /></a>
-              <a href=""><img src="./asset/img/header-inst.svg" alt="" /></a>
-              <a href=""><img src="./asset/img/header-tw.svg" alt="" /></a>
-              <a href=""><img src="./asset/img/header-fa.svg" alt="" /></a>
+              <a href=""><img src="./asset/img/header-line.svg" alt="https://page.line.me/qmc3689p?openQrModal=true" /></a>
+              <a href=""><img src="./asset/img/header-inst.svg" alt="https://www.instagram.com/reise_skin/" /></a>
+              <a href=""><img src="./asset/img/header-tw.svg" alt="https://twitter.com/reise_skin/" /></a>
+              <a href=""><img src="./asset/img/header-fa.svg" alt="https://www.facebook.com/Zero%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-177980829418264/" /></a>
             </div>
             <p class="l-header__modal-copyright c-copyright">Copyright&copy; REISE All rights Reserved.</p>
           </div>
@@ -118,6 +131,7 @@
 
     <main class="l-main">
       <div class="l-main__inner">
+
         <div class="p-home-top">
           <div class="p-home-top__inner">
             <div class="p-home-top__logo"><img src="./asset/img/home-top-logo.svg" alt="REISE Skin up Member’s SALON" /></div>
@@ -193,7 +207,7 @@
               <!-- おすすめメニュー -->
               <ul class="p-home-menu__list">
                 <li class="p-home-menu__items p-home-menu__items--recommend">
-                  <ul class="p-home-menu__item">
+                  <ul class="p-home-menu__item js-toggle-parent">
                     <li class="p-home-menu__item--title c-text--lg">REISEのおすすめ<span class="c-text--sm">（初回はこちらがおすすめ）</span></li>
                     <!-- メニュー -->
                     <ul class="p-home-menu__item--menu">
@@ -208,9 +222,9 @@
                     </ul>
                     <hr class="c-border" />
                     <!-- <主な施術内容> -->
-                    <div class="p-home-menu__toggle js-toggle-text">施術メニューはこちら<span class="js-toggle"></span></div>
+                    <div class="p-home-menu__toggle js-toggle is-show">施術メニューはこちら</div>
                     <!-- viewport 767px以下で表示-->
-                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-menu is-hidden">
+                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-content">
                       <li>&lt;主な施術内容&gt;</li>
                       <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
                       <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
@@ -229,7 +243,7 @@
                 <div class="c-button-reserve--md"><a href="https://page.line.me/qmc3689p?oat__id=685939&openQrModal=thue">ご予約はこちら</a></div>
 
                 <li class="p-home-menu__items p-home-menu__items--recommend">
-                  <ul class="p-home-menu__item">
+                  <ul class="p-home-menu__item js-toggle-parent">
                     <li class="p-home-menu__item--title c-text--lg">毛穴が気になる方におすすめ</li>
                     <!-- メニュー -->
                     <ul class="p-home-menu__item--menu">
@@ -244,9 +258,9 @@
                     </ul>
                     <hr class="c-border" />
                     <!-- <主な施術内容> -->
-                    <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                    <div class="p-home-menu__toggle js-toggle is-show">施術メニューはこちら</div>
                     <!-- viewport 767px以下で表示-->
-                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-menu is-hidden">
+                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-content">
                       <li>&lt;主な施術内容&gt;</li>
                       <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
                       <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
@@ -264,7 +278,7 @@
                 <div class="c-button-reserve--md"><a href="https://page.line.me/qmc3689p?oat__id=685939&openQrModal=thue">ご予約はこちら</a></div>
 
                 <li class="p-home-menu__items p-home-menu__items--recommend">
-                  <ul class="p-home-menu__item">
+                  <ul class="p-home-menu__item js-toggle-parent">
                     <li class="p-home-menu__item--title c-text--lg">乾燥肌が気になる方におすすめ</li>
                     <!-- メニュー -->
                     <ul class="p-home-menu__item--menu">
@@ -279,9 +293,9 @@
                     </ul>
                     <hr class="c-border" />
                     <!-- <主な施術内容> -->
-                    <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                    <div class="p-home-menu__toggle js-toggle is-show">施術メニューはこちら</div>
                     <!-- viewport 767px以下で表示-->
-                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-menu is-hidden">
+                    <ul class="p-home-menu__item--treatment c-text--sm js-toggle-content">
                       <li>&lt;主な施術内容&gt;</li>
                       <li>角質まで分析できる肌診断で<br />徹底肌分析からスタート</li>
                       <li>REISEオリジナルDEEPオフケア<br />（オゾンスチーマでニキビながらケア）</li>
@@ -317,7 +331,7 @@
                       </ul>
                     </div>
 
-                    <div class="p-home-menu__item-box">
+                    <div class="p-home-menu__item-box js-toggle-parent">
                       <!-- 時間 -->
                       <ul class="p-home-menu__item--time">
                         <li class="c-text--lg u-fw-500">ハリツヤケア&amp;筋膜小顔<br /><span class="c-text--sm u-fw-400">肌診断&ensp;（10分）&ensp;&plus;&ensp;施術&ensp;（50分）</span></li>
@@ -328,9 +342,9 @@
                         <li class="c-text--lg">7,260円（税込）</li>
                       </ul>
                       <!-- <主な施術内容> -->
-                      <div class="p-home-menu__toggle">施術メニューはこちら<span class="js-toggle"></span></div>
+                      <div class="p-home-menu__toggle js-toggle is-show">施術メニューはこちら</div>
                       <!-- viewport 767px以下で表示-->
-                      <ul class="p-home-menu__item--treatment p-home-menu__item--treatment--quick c-text--sm js-toggle-menu is-hidden">
+                      <ul class="p-home-menu__item--treatment p-home-menu__item--treatment--quick c-text--sm js-toggle-content">
                         <li>&lt;主な施術内容&gt;</li>
                         <li>角質まで分析できる肌診断で徹底肌分析からスタート</li>
                         <li><span class="u-d-inline-block">REISEオリジナルDEEPオフケア</span><span class="u-d-inline-block">（オゾンスチーマでニキビながらケア）</span></li>
@@ -459,7 +473,7 @@
             <p class="c-text--xxl u-fw-700">REISEご愛用者様特典<br class="u-br-lg" /><span class="c-text--sm u-fw-400">ご来店日までの45日間に対象の店舗にて商品をご購入された方のみ</span></p>
             <p class="c-text--sm u-mt-20">&#9679;割引特典</p>
 
-            <!-- viewport 1025px以上で表示 -->
+            <!-- viewport 769px以上で表示 -->
             <table class="p-home-privilege__table u-mt-10">
               <!-- 先頭行 -->
               <tr>
@@ -538,59 +552,147 @@
               </tr>
             </table>
 
-            <!-- viewport 1024px以下で表示 -->
-            <table class="p-home-privilege__table--lg">
+            <!-- viewport 768px以下で表示 -->
+            <table class="p-home-privilege__table--lg js-toggle-parent">
               <tr>
                 <th>ご購入金額<br />（お買い上げ総額）</th>
                 <td>2,200円〜<br />4,700円（税込）</td>
               </tr>
               <tr>
-                <td colspan="2">最大&nbsp;<span class="u-text-accent1">15%OFF</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">15%OFF</span><br />詳細はこちら</td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
+                <td>10,285円（税込）<br /><span class="u-text-accent1">15%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">80分コース</span><br /><span class="c-text--sm">通常9,680円（税込）</span></td>
+                <td>10,285円（税込）<br /><span class="u-text-accent1">15%OFF</span></td>
               </tr>
             </table>
-            <table class="p-home-privilege__table--lg">
+
+            <table class="p-home-privilege__table--lg js-toggle-parent">
               <tr>
                 <th>ご購入金額<br />（お買い上げ総額）</th>
                 <td>4,701円〜<br />7,700円（税込）</td>
               </tr>
               <tr>
-                <td colspan="2">最大&nbsp;<span class="u-text-accent1">20%OFF</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">20%OFF</span><br />詳細はこちら</td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常9,680円（税込）</span></td>
+                <td>10,285円（税込）<br /><span class="u-text-accent1">20%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">80分コース</span><br /><span class="c-text--sm">通常8,288円（税込）</span></td>
+                <td>10,285円（税込）<br /><span class="u-text-accent1">20%OFF</span></td>
               </tr>
             </table>
-            <table class="p-home-privilege__table--lg">
+
+            <table class="p-home-privilege__table--lg js-toggle-parent">
               <tr>
                 <th>ご購入金額<br />（お買い上げ総額）</th>
                 <td>7,701円〜<br />10,000円（税込）</td>
               </tr>
               <tr>
-                <td colspan="2">最大&nbsp;<span class="u-text-accent1">25%OFF</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">25%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら</td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
+                <td>9,075円（税込）<br /><span class="u-text-accent1">25%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">80分コース</span><br /><span class="c-text--sm">通常9,680円（税込）</span></td>
+                <td>7,260円（税込）<br /><span class="u-text-accent1">25%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">60分コース</span><br /><span class="c-text--sm">通常7,260円（税込）</span></td>
+                <td>5,808円（税込）<br /><span class="u-text-accent1">20%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content u-text-left">
+                <td class="c-texr--lg" colspan="2">
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン
+                </td>
               </tr>
             </table>
-            <table class="p-home-privilege__table--lg">
+
+            <table class="p-home-privilege__table--lg js-toggle-parent">
               <tr>
                 <th>ご購入金額<br />（お買い上げ総額）</th>
                 <td>10,001円〜<br />13,000円（税込）</td>
               </tr>
               <tr>
-                <td colspan="2">最大&nbsp;<span class="u-text-accent1">30%OFF</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">30%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
+                <td>8,470円（税込）<br /><span class="u-text-accent1">30%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">80分コース</span><br /><span class="c-text--sm">通常9,680円（税込）</span></td>
+                <td>6,776円（税込）<br /><span class="u-text-accent1">30%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">60分コース</span><br /><span class="c-text--sm">通常7,260円（税込）</span></td>
+                <td>5,445円（税込）<br /><span class="u-text-accent1">25%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content u-text-left">
+                <td class="c-texr--lg" colspan="2">
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン
+                </td>
               </tr>
             </table>
-            <table class="p-home-privilege__table--lg">
+            <table class="p-home-privilege__table--lg js-toggle-parent">
               <tr>
                 <th>ご購入金額<br />（お買い上げ総額）</th>
                 <td>13,001円〜<br />16,000円（税込）</td>
               </tr>
               <tr>
-                <td colspan="2">最大&nbsp;<span class="u-text-accent1">35%OFF</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">35%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
+                <td>7,865円（税込）<br /><span class="u-text-accent1">35%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">80分コース</span><br /><span class="c-text--sm">通常9,680円（税込）</span></td>
+                <td>6,292円（税込）<br /><span class="u-text-accent1">35%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">60分コース</span><br /><span class="c-text--sm">通常7,260円（税込）</span></td>
+                <td>5,082円（税込）<br /><span class="u-text-accent1">30%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content u-text-left">
+                <td class="c-texr--lg" colspan="2">
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン<span class="u-d-block u-ml-60">+</span>100分コースご利用で、<br>さらに製品プレゼント&ast;
+                </td>
               </tr>
             </table>
-            <table class="p-home-privilege__table--lg">
+
+            <table class="p-home-privilege__table--lg js-toggle-parent">
               <tr>
                 <th>ご購入金額<br />（お買い上げ総額）</th>
                 <td>16,000円以上（税込）</td>
               </tr>
               <tr>
-                <td colspan="2">最大&nbsp;<span class="u-text-accent1">40%OFF</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">40%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
+                <td>7,260円（税込）<br /><span class="u-text-accent1">40%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">80分コース</span><br /><span class="c-text--sm">通常9,680円（税込）</span></td>
+                <td>5,808円（税込）<br /><span class="u-text-accent1">40%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content">
+                <td><span class="u-fw-500 c-text--xxl">60分コース</span><br /><span class="c-text--sm">通常7,260円（税込）</span></td>
+                <td>5,082円（税込）<br /><span class="u-text-accent1">30%OFF</span></td>
+              </tr>
+              <tr class="js-toggle-content u-text-left">
+                <td class="c-texr--lg" colspan="2">
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>全オプション 半額クーポン<br /><span class="u-d-block u-ml-60">+</span>100分コースご利用で、<br>さらに製品プレゼント&ast;
+                </td>
               </tr>
             </table>
 
@@ -695,9 +797,13 @@
               <div class="p-home-reserve__line c-card">
                 <div class="p-home-reserve__line-logo"><img src="./asset/img/line-logo.svg" alt="" /></div>
                 <div class="p-home-reserve__line-text">
-                  <p>ご予約は<span class="u-text-accent2"><span class="u-d-inline-block">LINEが便利!</span></span></p>
+                  <p>
+                    ご予約は<span class="u-text-accent2"><span class="u-d-inline-block">LINEが便利!</span></span>
+                  </p>
                   <p class="c-text--sm u-mt-10">
-                    ご予約からお問い合わせまでLINEで<span class="u-d-inline-block">できるので操作も簡単。</span><br />来店日には、お知らせ配信もあり<span class="u-d-inline-block">予約忘れにも安心です。</span><br />さらにLINEだけの嬉しいクーポンもあります。<br />
+                    ご予約からお問い合わせまでLINEで<span class="u-d-inline-block">できるので操作も簡単。</span><br />来店日には、お知らせ配信もあり<span class="u-d-inline-block"
+                      >予約忘れにも安心です。</span
+                    ><br />さらにLINEだけの嬉しいクーポンもあります。<br />
                   </p>
                   <p class="c-text--sm u-mt-10">※友だち登録がお済みでない方は、<span class="u-d-inline-block">「友だち追加」をお願いいたします。</span></p>
                 </div>
@@ -747,13 +853,33 @@
     <!-- /.l-main -->
 
     <footer class="l-footer">
-      <div class="l-footer__inner"></div>
+      <div class="l-footer__inner">
+        <div class="l-footer__sns">
+          <a href=""><img src="./asset/img/footer-line.svg" alt="https://page.line.me/qmc3689p?openQrModal=true"></a>
+          <a href=""><img src="./asset/img/footer-inst.svg" alt="https://www.instagram.com/reise_skin/"></a>
+          <a href=""><img src="./asset/img/footer-tw.svg" alt="https://twitter.com/reise_skin/"></a>
+          <a href=""><img src="./asset/img/footer-fb.svg" alt="https://www.facebook.com/Zero%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-177980829418264/"></a>
+        </div>
+        <div class="l-footer__logo"><a href=""><img src="./asset/img/footer-logo.svg" alt=""></a></div>
+        <ul class="l-footer__list c-text--sm">
+          <li class="l-footer__item"><a href="">利用規約</a></li>
+          <li class="l-footer__item"><a href="">特定商取引法に基づく表記</a></li>
+          <li class="l-footer__item"><a href="">プライバシーポリシー</a></li>
+          <li class="l-footer__item"><a href="">ショップについて</a></li>
+          <li class="l-footer__item"><a href="">取り扱い店舗</a></li>
+          <li class="l-footer__item"><a href="">よくあるご質問</a></li>
+          <li class="l-footer__item"><a href="">お問い合わせ</a></li>
+        </ul>
+        <div class="l-footer__copyright u-mt-30">
+          <p class="c-copyright">Copyright&copy; REISE All rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- jsファイル 読み込み -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./asset/js/script.js"></script>
+    <script src="./asset/js/script.js?ver.1.0.1"></script>
   </body>
 </html>

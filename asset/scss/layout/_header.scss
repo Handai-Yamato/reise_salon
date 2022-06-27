@@ -92,6 +92,7 @@
   margin: 0 auto;
   z-index: index($elements, l-header__modal-menu);
   text-align: center;
+  overflow: auto;
 
   @include mq(md) {
     padding-top: 0;
@@ -164,11 +165,11 @@
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: left;
   font-size: 1.8rem;
   height: 370px;
-  overflow: scroll;
+  overflow: auto;
 
   a {
     color: inherit;
@@ -177,7 +178,7 @@
   @include mq(md) {
     display: block;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
-    height: 1020px;
+    height: 940px;
   }
 }
 
@@ -190,7 +191,7 @@
   width: 85%;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   color: #ffffff;
   background: $color-text2;
   font-size: 2.4rem;
@@ -262,13 +263,14 @@
   margin-top: 20px;
 
   @include mq(md) {
+    text-align: left;
     order: 3;
     margin-top: 60px;
   }
 }
 
 /*********************************
-	モーダルのトグルメニューの設定
+	モーダル内のトグルメニューの設定
 *********************************/
 .l-header__modal-list {
   list-style-type: none;
@@ -280,79 +282,6 @@
   dd ul li {
     margin-top: 10px;
     margin-left: 20px;
-  }
-}
-//カテゴリーメニュー
-.l-header__modal-item--category {
-  position: relative;
-
-  span {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: block;
-    width: 24px;
-    height: 24px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    border-radius: 50%;
-  }
-
-  span::before,
-  span::after {
-    display: block;
-    content: "";
-    background-color: $color-text2;
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  span::before {
-    width: 2px;
-    height: 15px;
-  }
-}
-
-//ラインナップメニュー
-.l-header__modal-item--lineup {
-  position: relative;
-
-  span {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: block;
-    width: 24px;
-    height: 24px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    border-radius: 50%;
-  }
-
-  span::before,
-  span::after {
-    display: block;
-    content: "";
-    background-color: $color-text2;
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  span::before {
-    width: 2px;
-    height: 15px;
   }
 }
 

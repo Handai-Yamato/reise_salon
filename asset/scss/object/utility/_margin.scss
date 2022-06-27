@@ -44,10 +44,27 @@
 }
 
 //margin-left
+.u-ml-10 {
+  margin-left: 10px;
+}
+
+.u-ml-20 {
+  margin-left: 20px;
+}
+
+.u-ml-60 {
+  margin-left: 60px;
+}
+
 .u-md-ml-10 {
   margin-left: 10px;
 
   @include mq(md) {
     display: none;
   }
+}
+
+//margin-bottm
+.u-mb-10 {
+  margin-bottom: 10px;
 }

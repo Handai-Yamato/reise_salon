@@ -30,6 +30,10 @@
     height: 1100px;
   }
 
+  @include mq(sm) {
+    height: 850px;
+  }
+
 } 
 
 @keyframes zoom {

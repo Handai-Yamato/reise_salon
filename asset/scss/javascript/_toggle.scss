@@ -1,8 +1,65 @@
 @use "../mixin" as *;
 @use "../setting" as *;
 
-/******** 常に表示 **********/
-.js-toggle-menu.is-hidden {
+/******** アイコンの+と× **********/
+.js-toggle.is-show {
+  position: relative;
+  cursor: pointer;
+  // transition: all 0.5s ease;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+.js-toggle.is-show::before,
+.js-toggle.is-show::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: $color-text2;
+}
+
+.js-toggle.is-show::before {
+  top: 48%;
+  right: 25px;
+  transform: rotate(0deg);
+
+  @include mq(md) {
+    right: 13%;
+  }
+}
+
+.js-toggle.is-show::after {
+  top: 48%;
+  right: 25px;
+  transform: rotate(90deg);
+
+  @include mq(md) {
+    right: 13%;
+  }
+}
+
+// クリックされた時に形状変化
+.js-toggle.is-show-done::before {
+  transform: rotate(45deg);
+}
+
+.js-toggle.is-show-done::after {
+  transform: rotate(-45deg);
+}
+
+/******** クリックされたら表示されるエリア **********/
+.js-toggle-content {
   display: none;
 }
 
@@ -10,6 +67,7 @@
 .p-home-menu__items {
   .js-toggle-menu.is-hidden {
     display: block;
+
     @include mq(md) {
       display: none;
     }
