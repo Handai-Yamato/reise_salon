@@ -65,10 +65,162 @@
 }
 
 /*********************************
+	上部固定メニュー
+*********************************/
+
+.js-header-fix {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  background-color: rgba(209, 209, 209, 0.8);
+  color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.js-header-fix.is-show-done {
+  opacity: 1;
+  visibility: visible;
+}
+
+.l-header__fix-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.l-header__fix-list {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  list-style-type: none;
+  font-size: 1.4rem;
+
+  @include mq(lg) {
+    gap: 40px;
+  }
+
+  @include mq(md) {
+    gap: 25px;
+    font-size: 1.3rem;
+  }
+}
+
+.l-header__fix-list li a {
+  position: relative;
+
+  position: relative;
+
+  /*hover時に下線をひく*/
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 86%;
+    height: 1px;
+    background: #ffffff;
+    bottom: -1px; /*アンダーラインがaタグの下端から現れる*/
+    transform: scale(0, 1); /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+    transition: transform 0.3s; /*変形の時間*/
+  }
+
+  &:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+  }
+}
+
+/*********************************
+	メガメニューの設定
+*********************************/
+.js-mega-menu-mask {
+  background-color: rgba(128, 128, 128, 0.8);
+  color: #ffffff;
+  z-index: index($elements, l-header__mega-menu-mask);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.js-mega-menu-mask.is-show {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s opacity;
+}
+
+.js-mega-menu-mask.is-show-done {
+  opacity: 1;
+  visibility: visible;
+}
+
+.l-header__mega-menu {
+  color: #ffffff;
+  z-index: index($elements, l-header__mega-menu);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.l-header__mega-menu.is-show {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s opacity;
+}
+
+.l-header__mega-menu.is-show-done {
+  opacity: 1;
+  visibility: visible;
+}
+
+.l-header__mega-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  text-align: left;
+  li {
+    list-style-type: none;
+    width: 100%;
+  }
+}
+
+.l-header__mega-menu-item {
+  list-style-type: none;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-left: 1px solid #ffffff;
+  padding-left: 30px;
+
+  ul {
+    max-width: 700px;
+    display: flex;
+  }
+
+  li {
+    margin-top: 20px;
+  }
+}
+
+/*********************************
 	モーダルの設定
 *********************************/
 .l-header__modal {
   z-index: index($elements, l-header__modal);
+  
 }
 
 .l-header__modal-mask {
@@ -94,6 +246,7 @@
   text-align: center;
   overflow: auto;
 
+
   @include mq(md) {
     padding-top: 0;
     padding-right: 9.8%;
@@ -101,6 +254,7 @@
     padding-left: 9.8%;
     display: flex;
     flex-direction: column;
+    overflow: unset;
   }
 }
 
@@ -171,6 +325,16 @@
   height: 370px;
   overflow: auto;
 
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(148, 145, 145, 0.2);
+  }
+
+  &::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+  }
+
   a {
     color: inherit;
   }
@@ -178,7 +342,7 @@
   @include mq(md) {
     display: block;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
-    height: 940px;
+    height: 1000px;
   }
 }
 

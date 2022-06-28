@@ -4,7 +4,7 @@
 .p-home-top {
   position: relative;
   margin-top: -100px; //headerの高さだけ上に詰める
-  height: 100vh;
+  height: 1080px;
   margin: 0 calc(50% - 50vw);
   overflow: hidden;
 
@@ -22,9 +22,6 @@
     animation-iteration-count: 1;
   }
 
-  @include mq(lg) {
-    height: 1325px;
-  }
 
   @include mq(md) {
     height: 1100px;

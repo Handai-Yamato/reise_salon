@@ -1,8 +1,16 @@
 @use "../../../mixin" as *;
 @use "../../../setting" as *;
 
+.p-home-nav {
+  z-index: index($elements, p-home-nav);
+}
+
 .p-home-nav__inner {
   padding: 50px 0;
+
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .p-home-nav__list {
@@ -15,5 +23,77 @@
 
   @include mq(md) {
     display: none;
-  } 
+  }
+}
+
+.p-home-nav--md {
+  display: none;
+  @include mq(md) {
+    z-index: index($elements, p-home-nav);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: $color-background2;
+    padding: 20px 3%;
+  }
+}
+
+.p-home-nav--md ul {
+  @include mq(md) {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.p-home-nav--md ul li {
+  @include mq(md) {
+    width: calc((100% - 30px) / 3);
+    max-width: 180px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #808080;
+    font-size: calc(1.0rem + 6 * (100vw - 320px) / 447); //14px~10pxで可変
+    border-radius: 8px;
+    height: 50px;
+    border-bottom: 4px solid #f0f0f0;
+    box-shadow: 7px 7px 5px -3px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+  // @include mq(sm) {
+  //   font-size: 1rem;
+  // }
+}
+
+.p-home-nav__list li a {
+  position: relative;
+
+  /*hover時に下線をひく*/
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 86%;
+    height: 1px;
+    background: $color-menu-accent;
+    bottom: -1px; /*アンダーラインがaタグの下端から現れる*/
+    transform: scale(0, 1); /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+    transition: transform 0.3s; /*変形の時間*/
+  }
+
+  &:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+  }
 }

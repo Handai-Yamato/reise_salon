@@ -22,19 +22,75 @@
         <nav class="l-header__gnav">
           <ul class="l-header__list">
             <li class="l-header__item"><a href="">MESSAGE</a></li>
-            <li class="l-header__item">
+            <li class="l-header__item js-header-menu">
               <a href="">PRODUCTS</a>
-              <ul class="l-header__mega-menu">
-                <li>基礎ケア
-                  <ul class="l-header-mega-menu__item">
-                    
-                  </ul>
-                </li>
-                <li>スペシャルケア</li>
-                <li>プラスケア</li>
-                <li>UVケア</li>
-                <li>サロンギフトチケット</li>
-              </ul>
+              <!--   メガメニュー -->
+              <nav class="l-header__mega-menu js-mega-menu is-show">
+                <h3 class="c-text--xxl u-font-cormorant">PRODUCTS</h3>
+                <ul class="l-header__mega-menu-list">
+                  <li class="c-text--lg">
+                    基礎ケア
+                    <ul class="l-header__mega-menu-item c-text--sm">
+                      <li><a href="">REISE&ensp;ジェントル&ensp;バイオ&ensp;クレンジングウォーター</a></li>
+                      <li><a href="">REISE&ensp;クリア保湿ウォッシュ</a></li>
+                      <li><a href="">REISE&ensp;ブースターオイル ミスト化粧水</a></li>
+                      <li><a href="">REISE&ensp;ブースターオイル ミスト化粧水&ensp;（ミニボトル）</a></li>
+                      <li><a href="">REISE&ensp;エッセンス&ensp;セラム乳液</a></li>
+                      <li><a href="">REISE&ensp;潤い4ステップキット&ensp;（10日間お試し）</a></li>
+                    </ul>
+                  </li>
+                  <li class="c-text--lg">
+                    スペシャルケア
+                    <ul class="l-header__mega-menu-item c-text--sm">
+                      <li><a href="">REISE&ensp;ホワイト&ensp;スパークリング&ensp;ジェルパック&ensp;（3個入）</a></li>
+                      <li><a href="">REISE&ensp;ホワイト スパークリング ジェルパック&ensp;（9個入）</a></li>
+                      <li><a href="">REISE&ensp;バイオ セルロース アイロンマスク&ensp;（1枚使い切り）</a></li>
+                      <li><a href="">REISE&ensp;バイオ セルロース アイロンマスク&ensp;（5枚入）</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <ul class="l-header__mega-menu-list">
+                  <li class="c-text--lg">
+                    プラスケア
+                    <ul class="l-header__mega-menu-item c-text--sm">
+                      <li><a href="">REISE&ensp;ファーメント&ensp;エッセンスCL</a></li>
+                      <li><a href="">REISE&ensp;ホワイト&ensp;ジェリーエッセンスW50</a></li>
+                      <li><a href="">REISE&ensp;スリーピングフィニッシャーパック</a></li>
+                    </ul>
+                  </li>
+                  <li class="c-text--lg">
+                    UVケア
+                    <ul class="l-header__mega-menu-item c-text--sm">
+                      <li><a href="">REISE&ensp;ウォータリーバリア&ensp;トーンアップUV</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <ul class="l-header__mega-menu-list">
+                  <li class="c-text--lg">
+                    サロン&ensp;ギフトチケット
+                    <ul class="l-header__mega-menu-item c-text--sm">
+                      <ul>
+                        <li><a href="">毛穴リセット&ensp;＆&ensp;ハリチャージ&ensp;（100分）</a></li>
+                        <li class="u-mt-0"><a href="">【オプション】 毛穴レスディップクリア （15分）</a></li>
+                      </ul>
+
+                      <ul>
+                        <li><a href="">筋膜運動 ＋ 毛穴リセット （80分）</a></li>
+                        <li><a href="">【オプション】 目元ハリしわ集中ケア （15分）</a></li>
+                      </ul>
+
+                      <ul>
+                        <li><a href="">筋膜ほぐし ＋ ハリチャージ （80分）</a></li>
+                        <li><a href="">【オプション】 整骨小顔ヘッドマッサージ （10分）</a></li>
+                      </ul>
+                      <li><a href="">クイック筋膜ケア ＋ 潤いチャージ （60分）</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="l-header__mega-menu-mask js-mega-menu-mask is-show"></div>
             </li>
             <li class="l-header__item"><a href="">SUBSCRIPTION</a></li>
             <li class="l-header__item">
@@ -126,12 +182,29 @@
           <div class="l-header__modal-mask js-modal-mask is-hidden"></div>
         </div>
       </div>
+      <!-- 上部固定ナビ -->
+      <div class="l-header__fix js-header-fix">
+        <div class="l-header__fix-inner">
+          <ul class="l-header__fix-list js-home-link">
+            <li><a href="#home-about">サロンについて</a></li>
+            <li><a href="#home-menu">メニュー／料金</a></li>
+            <li><a href="#home-privilege">特典</a></li>
+            <li><a href="#home-access">店舗情報</a></li>
+            <li><a href="#home-reserve">ご予約</a></li>
+            <li>
+              <a
+                href="https://cart.reise-skin.com/contact/index?_gl=1*1m4lsbu*_ga*MjU5Mzc5MzM1LjE2NTU2ODg0NzA.*_ga_DT71PW0TPY*MTY1NjQwMzgyNS4zNS4xLjE2NTY0MDM4MjkuMA..&_ga=2.174246882.1943872028.1656317882-259379335.1655688470&_gac=1.186169947.1654478239.Cj0KCQjwqPGUBhDwARIsANNwjV6051V09U0JTBGontdQGHiyFUxWb8fTomImfD45iatPjEA1ISqo8vUaAjDHEALw_wcB"
+                >お問い合わせ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!-- /.l-header -->
 
     <main class="l-main">
       <div class="l-main__inner">
-
         <div class="p-home-top">
           <div class="p-home-top__inner">
             <div class="p-home-top__logo"><img src="./asset/img/home-top-logo.svg" alt="REISE Skin up Member’s SALON" /></div>
@@ -140,15 +213,37 @@
         </div>
         <!-- /.p-home-top -->
 
-        <nav class="p-home-nav">
+        <nav class="p-home-nav js-home-nav">
           <div class="p-home-nav__inner">
-            <ul class="p-home-nav__list">
-              <li class="p-home-nav__item js-scroll"><a href="">サロンについて</a></li>
-              <li class="p-home-nav__item"><a href="">メニュー／料金</a></li>
-              <li class="p-home-nav__item"><a href="">特典</a></li>
-              <li class="p-home-nav__item"><a href="">店舗情報</a></li>
-              <li class="p-home-nav__item"><a href="">ご予約</a></li>
-              <li class="p-home-nav__item"><a href="">お問い合わせ</a></li>
+            <ul class="p-home-nav__list js-home-link">
+              <li class="p-home-nav__item"><a href="#home-about">サロンについて</a></li>
+              <li class="p-home-nav__item"><a href="#home-menu">メニュー／料金</a></li>
+              <li class="p-home-nav__item"><a href="#home-privilege">特典</a></li>
+              <li class="p-home-nav__item"><a href="#home-access">店舗情報</a></li>
+              <li class="p-home-nav__item"><a href="#home-reserve">ご予約</a></li>
+              <li class="p-home-nav__item">
+                <a
+                  href="https://cart.reise-skin.com/contact/index?_gl=1*1m4lsbu*_ga*MjU5Mzc5MzM1LjE2NTU2ODg0NzA.*_ga_DT71PW0TPY*MTY1NjQwMzgyNS4zNS4xLjE2NTY0MDM4MjkuMA..&_ga=2.174246882.1943872028.1656317882-259379335.1655688470&_gac=1.186169947.1654478239.Cj0KCQjwqPGUBhDwARIsANNwjV6051V09U0JTBGontdQGHiyFUxWb8fTomImfD45iatPjEA1ISqo8vUaAjDHEALw_wcB"
+                  >お問い合わせ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- viewport 767px以下で表示-->
+          <div class="p-home-nav--md">
+            <ul class="js-home-link">
+              <li class="p-home-nav__item"><a href="#home-about">サロンについて</a></li>
+              <li class="p-home-nav__item"><a href="#home-menu">メニュー／料金</a></li>
+              <li class="p-home-nav__item"><a href="#home-privilege">特典</a></li>
+              <li class="p-home-nav__item"><a href="#home-access">店舗情報</a></li>
+              <li class="p-home-nav__item"><a href="#home-reserve">ご予約</a></li>
+              <li class="p-home-nav__item">
+                <a
+                  href="https://cart.reise-skin.com/contact/index?_gl=1*1m4lsbu*_ga*MjU5Mzc5MzM1LjE2NTU2ODg0NzA.*_ga_DT71PW0TPY*MTY1NjQwMzgyNS4zNS4xLjE2NTY0MDM4MjkuMA..&_ga=2.174246882.1943872028.1656317882-259379335.1655688470&_gac=1.186169947.1654478239.Cj0KCQjwqPGUBhDwARIsANNwjV6051V09U0JTBGontdQGHiyFUxWb8fTomImfD45iatPjEA1ISqo8vUaAjDHEALw_wcB"
+                  >お問い合わせ</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
@@ -160,7 +255,7 @@
         </div>
         <!-- /.p-home-slider -->
 
-        <div class="p-home-about">
+        <div id="home-about" class="p-home-about">
           <div class="p-home-about__inner">
             <h2 class="c-heading-2">&minus;&ensp;サロンについて&ensp;&minus;</h2>
             <div class="p-home-about__content">
@@ -200,7 +295,7 @@
         </div>
         <!-- /.p-home-about -->
 
-        <div class="p-home-menu">
+        <div id="home-menu" class="p-home-menu">
           <div class="p-home-menu__inner">
             <h2 class="c-heading-2">&minus;&ensp;メニュー／料金&ensp;&minus;</h2>
             <div class="p-home-menu__wrap">
@@ -467,7 +562,7 @@
         </div>
         <!-- /.p-home-menu -->
 
-        <div class="p-home-privilege">
+        <div id="home-privilege" class="p-home-privilege">
           <div class="p-home-privilege__inner">
             <h2 class="c-heading-2 p-home-privilege__title">&minus;&ensp;特典&ensp;&minus;</h2>
             <p class="c-text--xxl u-fw-700">REISEご愛用者様特典<br class="u-br-lg" /><span class="c-text--sm u-fw-400">ご来店日までの45日間に対象の店舗にて商品をご購入された方のみ</span></p>
@@ -595,7 +690,9 @@
                 <td>7,701円〜<br />10,000円（税込）</td>
               </tr>
               <tr>
-                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">25%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら</td>
+                <td class="js-toggle is-show" colspan="2">
+                  最大&nbsp;<span class="u-text-accent1">25%OFF</span><br /><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら
+                </td>
               </tr>
               <tr class="js-toggle-content">
                 <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
@@ -611,7 +708,8 @@
               </tr>
               <tr class="js-toggle-content u-text-left">
                 <td class="c-texr--lg" colspan="2">
-                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span
+                  ><br />オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン
                 </td>
               </tr>
             </table>
@@ -622,7 +720,9 @@
                 <td>10,001円〜<br />13,000円（税込）</td>
               </tr>
               <tr>
-                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">30%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">
+                  最大&nbsp;<span class="u-text-accent1">30%OFF</span><br /><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span>
+                </td>
               </tr>
               <tr class="js-toggle-content">
                 <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
@@ -638,7 +738,8 @@
               </tr>
               <tr class="js-toggle-content u-text-left">
                 <td class="c-texr--lg" colspan="2">
-                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span
+                  ><br />オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン
                 </td>
               </tr>
             </table>
@@ -648,7 +749,9 @@
                 <td>13,001円〜<br />16,000円（税込）</td>
               </tr>
               <tr>
-                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">35%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">
+                  最大&nbsp;<span class="u-text-accent1">35%OFF</span><br /><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span>
+                </td>
               </tr>
               <tr class="js-toggle-content">
                 <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
@@ -664,7 +767,9 @@
               </tr>
               <tr class="js-toggle-content u-text-left">
                 <td class="c-texr--lg" colspan="2">
-                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン<span class="u-d-block u-ml-60">+</span>100分コースご利用で、<br>さらに製品プレゼント&ast;
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span
+                  ><br />オプション<br />（毛穴レスディップクリアor目元ハリしわ集中ケアor整骨小顔ヘッドor筋膜リフト強化）<br />半額クーポン<span class="u-d-block u-ml-60">+</span
+                  >100分コースご利用で、<br />さらに製品プレゼント&ast;
                 </td>
               </tr>
             </table>
@@ -675,7 +780,9 @@
                 <td>16,000円以上（税込）</td>
               </tr>
               <tr>
-                <td class="js-toggle is-show" colspan="2">最大&nbsp;<span class="u-text-accent1">40%OFF</span><br><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span></td>
+                <td class="js-toggle is-show" colspan="2">
+                  最大&nbsp;<span class="u-text-accent1">40%OFF</span><br /><span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />詳細はこちら<span class="js-toggle"></span>
+                </td>
               </tr>
               <tr class="js-toggle-content">
                 <td><span class="u-fw-500 c-text--xxl">100分コース</span><br /><span class="c-text--sm">通常12,100円（税込）</span></td>
@@ -691,7 +798,8 @@
               </tr>
               <tr class="js-toggle-content u-text-left">
                 <td class="c-texr--lg" colspan="2">
-                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br>全オプション 半額クーポン<br /><span class="u-d-block u-ml-60">+</span>100分コースご利用で、<br>さらに製品プレゼント&ast;
+                  <span class="p-home-privilege__present--md u-mb-10">プレゼント</span><br />全オプション 半額クーポン<br /><span class="u-d-block u-ml-60">+</span
+                  >100分コースご利用で、<br />さらに製品プレゼント&ast;
                 </td>
               </tr>
             </table>
@@ -748,7 +856,7 @@
         </div>
         <!-- /.p-home-privilege -->
 
-        <div class="p-home-access">
+        <div id="home-access" class="p-home-access">
           <div class="p-home-access__inner">
             <h2 class="c-heading-2">&minus;&ensp;店舗情報&ensp;&minus;</h2>
             <div class="p-home-access__sub-title c-text--lg">REISE&ensp;Skin&ensp;up&ensp;Member’s&ensp;SALON<span class="c-text--xs u-d-block">（ライゼ スキンアップ メンバーズサロン）</span></div>
@@ -790,7 +898,7 @@
         </div>
         <!-- /.p-home-access -->
 
-        <div class="p-home-reserve">
+        <div id="home-reserve" class="p-home-reserve">
           <div class="p-home-reserve__inner">
             <h2 class="c-heading-2 p-home-reserve__title">&minus;&ensp;ご予約&ensp;&minus;</h2>
             <div class="p-home-reserve__content">
@@ -855,12 +963,14 @@
     <footer class="l-footer">
       <div class="l-footer__inner">
         <div class="l-footer__sns">
-          <a href=""><img src="./asset/img/footer-line.svg" alt="https://page.line.me/qmc3689p?openQrModal=true"></a>
-          <a href=""><img src="./asset/img/footer-inst.svg" alt="https://www.instagram.com/reise_skin/"></a>
-          <a href=""><img src="./asset/img/footer-tw.svg" alt="https://twitter.com/reise_skin/"></a>
-          <a href=""><img src="./asset/img/footer-fb.svg" alt="https://www.facebook.com/Zero%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-177980829418264/"></a>
+          <a href=""><img src="./asset/img/footer-line.svg" alt="https://page.line.me/qmc3689p?openQrModal=true" /></a>
+          <a href=""><img src="./asset/img/footer-inst.svg" alt="https://www.instagram.com/reise_skin/" /></a>
+          <a href=""><img src="./asset/img/footer-tw.svg" alt="https://twitter.com/reise_skin/" /></a>
+          <a href=""><img src="./asset/img/footer-fb.svg" alt="https://www.facebook.com/Zero%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-177980829418264/" /></a>
         </div>
-        <div class="l-footer__logo"><a href=""><img src="./asset/img/footer-logo.svg" alt=""></a></div>
+        <div class="l-footer__logo">
+          <a href=""><img src="./asset/img/footer-logo.svg" alt="" /></a>
+        </div>
         <ul class="l-footer__list c-text--sm">
           <li class="l-footer__item"><a href="">利用規約</a></li>
           <li class="l-footer__item"><a href="">特定商取引法に基づく表記</a></li>
@@ -880,6 +990,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- jsファイル 読み込み -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./asset/js/script.js?ver.1.0.1"></script>
+    <script src="./asset/js/script.js?ver.1.0.2"></script>
   </body>
 </html>
