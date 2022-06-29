@@ -1,0 +1,24 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-line-banner {
+  color: $color-text1;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  padding: 15px;
+  position: fixed;
+  top: 190px;
+  right: 30px;
+  width: 100%;
+  max-width: 175px;
+
+  @include mq(md) {
+    padding: 2%;
+    max-width: 110px;
+    font-size: 1.1rem;
+    top: 110px;
+    right: 10px;
+  }
+}

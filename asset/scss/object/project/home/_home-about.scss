@@ -127,10 +127,8 @@
 }
 
 .p-home-about__border {
-  margin: 0 auto;
-  display: none;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
 
-  @include mq(lg) {
-    display: block;
-  }
 }

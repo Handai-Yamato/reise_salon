@@ -19,9 +19,8 @@
   align-items: center;
   max-width: 1920px;
   margin: 0 auto;
-
-  @include mq(lg) {
-    padding: 25px 3%;
+  @include mq(md) {
+    padding: 5px 3%;
   }
 }
 
@@ -31,7 +30,13 @@
   }
 }
 
+.l-header__logo a {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
 .l-header__logo img {
+
   @include mq(sm) {
     width: 85%;
   }
@@ -44,10 +49,7 @@
   letter-spacing: 0.1em;
   line-height: 1.5;
   display: flex;
-}
 
-.l-header__item span {
-  color: #b29a71;
 }
 
 .l-header__item ~ .l-header__item {
@@ -58,10 +60,41 @@
   }
 }
 
+.l-header__item a {
+  transition: all 0.2s;
+  display: inline-block;
+  width: auto;
+}
+
+.l-header__item a:hover {
+  span:nth-child(1) {
+    display: none;
+  }
+
+  span:nth-child(2) {
+    display: inline-block;
+  }
+}
+
+.l-header__item a span {
+  transition: all 0.5s;
+  display: inline-block;
+  white-space: nowrap;
+
+  &:nth-child(2) {
+    display: none;
+  }
+
+}
+
 .l-header__right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+}
+
+.l-header__icon img {
+  width: 20px;
 }
 
 /*********************************
@@ -137,7 +170,7 @@
 	メガメニューの設定
 *********************************/
 .js-mega-menu-mask {
-  background-color: rgba(128, 128, 128, 0.8);
+  background-color: rgba(128, 128, 128, 0.88);
   color: #ffffff;
   z-index: index($elements, l-header__mega-menu-mask);
   position: absolute;
@@ -145,17 +178,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-}
-
-.js-mega-menu-mask.is-show {
-  visibility: hidden;
-  opacity: 0;
-  transition: 1s opacity;
-}
-
-.js-mega-menu-mask.is-show-done {
-  opacity: 1;
-  visibility: visible;
+  display: none;
 }
 
 .l-header__mega-menu {
@@ -164,28 +187,28 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  padding-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  display: none;
+  overflow: auto;
 }
 
-.l-header__mega-menu.is-show {
-  visibility: hidden;
-  opacity: 0;
-  transition: 1s opacity;
+.l-header__mega-menu-close {
+  font-size: 35px;
+  display: inline-block;
+  position: absolute;
+  right: 10%;
+  cursor: pointer;
 }
 
-.l-header__mega-menu.is-show-done {
-  opacity: 1;
-  visibility: visible;
-}
 
 .l-header__mega-menu-list {
   display: flex;
   justify-content: center;
-  gap: 50px;
   width: 100%;
   max-width: 1000px;
   margin-right: auto;
@@ -211,8 +234,27 @@
   }
 
   li {
-    margin-top: 20px;
+    margin-top: 10px;
   }
+}
+
+.l-header__mega-menu--salonticket {
+  display: flex;
+  align-items: flex-start;
+  border: none;
+  margin-left: 0;
+}
+
+.l-header__mega-menu--salon {
+  flex-direction: column;
+  border-left: 1px solid #ffffff;
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+.l-header__mega-menu--option {
+  flex-direction: column;
+  margin-left: 40px;
 }
 
 /*********************************
@@ -234,8 +276,6 @@
 }
 
 .l-header__modal-menu {
-  width: 100%;
-  padding: 40px;
   border-radius: 4px;
   position: absolute;
   top: 40px;
@@ -244,21 +284,21 @@
   margin: 0 auto;
   z-index: index($elements, l-header__modal-menu);
   text-align: center;
-  overflow: auto;
+  max-width: 500px;
 
 
   @include mq(md) {
-    padding-top: 0;
-    padding-right: 9.8%;
+    padding-top: 30px;
     padding-bottom: 0;
-    padding-left: 9.8%;
     display: flex;
     flex-direction: column;
-    overflow: unset;
+    overflow: auto;
+    max-width: 80%;
   }
 }
 
 .l-header__modal-menu-wrap {
+  overflow: auto;
   @include mq(md) {
     order: 2;
     a {
@@ -304,7 +344,7 @@
 .l-header__modal-border {
   width: 600px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
 
   @include mq(md) {
     @include mq(sp) {
@@ -315,6 +355,7 @@
 
 .l-header__modal-lists {
   display: flex;
+  gap: 20px;
   justify-content: space-around;
   width: 100%;
   max-width: 750px;
@@ -322,7 +363,7 @@
   margin-top: 30px;
   text-align: left;
   font-size: 1.8rem;
-  height: 370px;
+  max-height: 400px;
   overflow: auto;
 
 
@@ -342,20 +383,27 @@
   @include mq(md) {
     display: block;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
-    height: 1000px;
+    max-height: 600px;
   }
 }
 
 // 一番上の要素以外にmargin-topを指定
 .l-header__modal-item ~ .l-header__modal-item {
-  margin-top: 25px;
+  margin-top: 15px;
+}
+
+.l-header__modal-list--lg {
+  display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
 }
 
 .l-header__modal-banner {
-  width: 85%;
-  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
   color: #ffffff;
   background: $color-text2;
   font-size: 2.4rem;
@@ -380,19 +428,19 @@
 .l-header__modal-banner--md {
   display: none;
   @include mq(md) {
-    display: block;
-    width: 85%;
+    display: inline-block;
+    width: 100%;
     max-width: 600px;
     color: #ffffff;
     background: $color-text2;
     font-size: 2.4rem;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     margin: 40px 0;
     font-size: calc(1.2rem + 12 * (100vw - 320px) / 447); //24px~12pxで可変
 
     span {
-      display: block;
+      display: inline-block;
       font-size: calc(1rem + 4 * (100vw - 320px) / 447); //24px~12pxで可変
     }
 
@@ -418,7 +466,6 @@
     order: 1;
     margin-top: 0;
     margin-top: -10px;
-    margin-bottom: 40px;
     text-align: left;
   }
 }
@@ -446,32 +493,6 @@
   dd ul li {
     margin-top: 10px;
     margin-left: 20px;
-  }
-}
-
-// 一番上の要素以外にmargin-topを指定
-.l-header__modal-item ~ .l-header__modal-item {
-  margin-top: 25px;
-}
-
-.l-header__modal-banner {
-  width: 85%;
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 50px;
-  color: #ffffff;
-  background: $color-text2;
-  font-size: 2.4rem;
-  padding: 20px;
-
-  span {
-    display: block;
-    font-size: 1.4rem;
-  }
-
-  span dd {
-    overflow: scroll;
-    height: 100px;
   }
 }
 

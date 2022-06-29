@@ -22,6 +22,36 @@ mask.addEventListener("click", function () {
 });
 
 /*********************************
+  メガメニュー
+*********************************/
+$(function () {
+  $(".js-header-menu").hover(
+    function () {
+      $(this).find(".js-mega-menu").stop().fadeIn();
+      $(this).find(".js-mega-menu-mask").stop().fadeIn();
+    },
+    function () {
+      $(this).find(".js-mega-menu").stop().fadeOut();
+      $(this).find(".js-mega-menu-mask").stop().fadeOut();
+    }
+  );
+});
+
+$(function () {
+  $(".js-mega-menu-close").click(function () {
+    $(".js-mega-menu").fadeOut();
+    $(".js-mega-menu-mask").fadeOut();
+  });
+});
+
+$(function () {
+  $(".js-mega-menu").click(function () {
+    $(".js-mega-menu").fadeOut();
+    $(".js-mega-menu-mask").fadeOut();
+  });
+});
+
+/*********************************
 	ページ内リンク
 *********************************/
 $('.js-home-link a[href*="#"]').click(function () {
@@ -85,12 +115,28 @@ $(function () {
   $(".js-slider").slick({
     autoplay: true, // 自動でスクロール
     autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
-    speed: 50000, // スライドが流れる速度を設定
+    speed: 20000, // スライドが流れる速度を設定
     cssEase: "linear", // スライドの流れ方を等速に設定
-    slidesToShow: 1, // 表示するスライドの数
+    slidesToShow: 5, // 表示するスライドの数
     swipe: false, // 操作による切り替えはさせない
     arrows: false, // 矢印非表示
     pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
     pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          autoplay: true, // 自動でスクロール
+          autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+          speed: 20000, // スライドが流れる速度を設定
+          cssEase: "linear", // スライドの流れ方を等速に設定
+          slidesToShow: 3, // 表示するスライドの数
+          swipe: false, // 操作による切り替えはさせない
+          arrows: false, // 矢印非表示
+          pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+          pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+        },
+      },
+    ],
   });
 });

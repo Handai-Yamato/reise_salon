@@ -1,3 +1,5 @@
+@use "../../mixin" as *;
+@use "../../setting" as *;
 
 .u-fw-700 {
     font-weight: 700;
@@ -5,6 +7,13 @@
 
 .u-fw-500 {
     font-weight: 500;
+}
+
+.u-fw-lg-500 {
+    @include mq(lg) {
+        font-weight: 500;
+
+    }
 }
 
 .u-fw-400 {
