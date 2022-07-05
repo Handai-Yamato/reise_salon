@@ -35,7 +35,10 @@
     bottom: 0;
     width: 100%;
     background: $color-background2;
-    padding: 15px 3%;
+    padding-top: 12px;
+    padding-right: 3%;
+    padding-bottom: 12px;
+    padding-left: 3%;
   }
 }
 
@@ -43,6 +46,7 @@
   @include mq(md) {
     list-style-type: none;
     display: flex;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -52,7 +56,6 @@
   @include mq(md) {
     width: calc((100% - 30px) / 3);
     max-width: 170px;
-    margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,10 +65,9 @@
     font-size: calc(1rem + 6 * (100vw - 320px) / 447); //14px~10pxで可変
     border-radius: 8px;
     height: 35px;
-    border-bottom: 4px solid #f0f0f0;
-    box-shadow: 7px 7px 5px -3px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 6px 6px 4px -4px rgba(0, 0, 0, 0.2);
     background-color: #f0f0f0;
-    margin-bottom: 15px;
 
     &:nth-child(3n + 1) {
       margin-left: 0;

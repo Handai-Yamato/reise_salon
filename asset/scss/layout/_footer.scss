@@ -4,14 +4,19 @@
 .l-footer {
   @include bg-image-jpg($filename: footer-bg);
   background-size: cover;
-  height: 1000px;
+  height: auto;
   color: #ffff;
 }
 
 .l-footer__inner {
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 450px;
+  padding-top: 100px;
+  padding-bottom: 250px;
+
+  @include mq(md) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
 }
 
 .l-footer__sns {
@@ -31,11 +36,11 @@
 
 .l-footer__logo {
   text-align: center;
-  margin-top: 170px;
+  margin-top:110px;
 
   @include mq(lg) {
     img {
-        width: 320px;
+      min-width: 200px;
     }
   }
 }

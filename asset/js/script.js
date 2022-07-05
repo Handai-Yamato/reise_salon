@@ -1,4 +1,48 @@
 /*********************************
+	360px未満はviewportを固定する
+*********************************/
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value =
+      window.outerWidth > 360
+        ? 'width=device-width,initial-scale=1'
+        : 'width=360';
+    if (viewport.getAttribute('content') !== value) {
+      viewport.setAttribute('content', value);
+    }
+  }
+  addEventListener('resize', switchViewport, false);
+  switchViewport();
+})();
+
+/*********************************
+	スクロールでフェードイン
+*********************************/
+/*------ headerを過ぎると表示 -------*/
+if($(window).width() < 768) {
+	$(function(){
+    $(window).on('load resize',function(){
+        btnOffset = $('.js-fadein-trigger').offset().top;
+        winH = $(window).height();
+    });
+    $(function() {
+        var fadeIn = $('.js-fadein');
+        fadeIn.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > btnOffset - winH) {
+              fadeIn.fadeIn();
+            } else {
+              fadeIn.fadeOut();
+            }
+        });
+    });
+  });
+} else {
+  ; //viewport767px以上なら表示しない
+}
+
+/*********************************
 	ハンバーガー、モーダルメニュー
 *********************************/
 /******** 要素を取得 **********/
@@ -6,12 +50,14 @@ const hamburger = document.querySelector(".js-hamburger");
 const open = document.querySelector(".js-modal-open");
 const modal = document.querySelector(".js-modal-menu");
 const mask = document.querySelector(".js-modal-mask");
+const body = document.body
 
 /******** js-hamburgerをクリックするとモーダルを表示 **********/
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("is-active"); //is-activeクラスを付与、削除
   modal.classList.toggle("is-hidden"); //is-hiddenクラスを削除
   mask.classList.toggle("is-hidden"); //is-hiddenクラスを削除
+  // body.classList.toggle("is-fix"); 
 });
 
 /******** js-modal-maskをクリックするとモーダルを非表示 **********/
@@ -139,4 +185,46 @@ $(function () {
       },
     ],
   });
+});
+
+/*********************************
+	クリックでテキスト変換
+*********************************/
+$(function(){
+  $('.js-text-change').on('click', function(event){
+      event.preventDefault();
+      $(this).toggleClass('is-active');
+
+      if($(this).hasClass('is-active')){
+          var text = $(this).data('text-clicked');
+      } else {
+          var text = $(this).data('text-default');
+      }
+
+      $(this).html(text);
+  });
+});
+
+
+//クリックした時の動作
+$(".js-toggle-text").on("click", function () {
+  //タイトル要素をクリックしたら
+  const findChildren1 = $(this).children(".js-toggle-text1"); //要素を取得し
+  const findChildren2 = $(this).children(".js-toggle-text2"); //要素を取得し
+
+  if ($(findChildren1).hasClass("is-hidden")) {
+    //タイトル要素にクラス名is-hiddenがあれば
+    $(findChildren1).removeClass("is-hidden"); //クラス名を除去し
+  } else {
+    //それ以外は
+    $(findChildren1).addClass("is-hidden"); //クラス名is-hiddenを付与
+  }
+
+  if ($(findChildren2).hasClass("is-active")) {
+    //タイトル要素にクラス名is-activeがあれば
+    $(findChildren2).removeClass("is-active"); //クラス名を除去し
+  } else {
+    //それ以外は
+    $(findChildren2).addClass("is-active"); //クラス名is-activeを付与
+  }
 });

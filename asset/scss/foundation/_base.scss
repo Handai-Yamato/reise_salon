@@ -34,10 +34,15 @@ body {
 
   @include mq(md) {
     font-size: calc(1.6rem + 8 * (100vw - 575px) / 192); //24px~16pxで可変
+    padding-bottom: 109px;
   }
   @include mq(sm) {
     font-size: 1.6rem;
   }
+}
+
+body.is-fix {
+  overflow-y: hidden;
 }
 
 img,

@@ -15,8 +15,12 @@
   margin: 0 auto;
 
   @include mq(xl) {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  @include mq(md) {
+    padding-top: 60px;
   }
 }
 
@@ -96,8 +100,8 @@
     padding-bottom: 15px;
     background: #fff;
     color: $color-accent3;
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-right: 2%;
+    padding-left: 2%;
     margin-right: auto;
   }
 }
@@ -126,10 +130,15 @@
       border-left: 1px solid $color-text3;
     }
 
-    /* 2行目にborder-topを指定 */
+    /* 2行目以降にborder-topを指定 */
     tr + tr td {
       border-top: 1px solid $color-text3;
     }
+
+    /* 2行目の余白設定 */
+    tr:nth-child(2) td {
+      padding-right: 15%;
+    } 
 
     tr:nth-child(n + 3) {
       td + td {
@@ -158,13 +167,42 @@
     display: inline-block;
     font-size: 1.8rem;
     border-radius: 15px;
-    padding: 3px 26px;
+    padding: 0 26px;
     max-width: 145px;
     width: 100%;
   }
 }
 
+.p-home-privilege__toggle {
 
+
+    &--close {
+      display: none;
+
+    }
+    &--close.is-active {
+      display: block;
+    }
+    
+    &--hidden {
+      &.is-hidden {
+        display: none;
+      }
+    }
+
+}
+
+// hover時にテキスト変換
+.l-header__item a span {
+  transition: all 0.5s;
+  display: inline-block;
+  white-space: nowrap;
+
+  &:nth-child(2) {
+    display: none;
+  }
+
+}
 
 .p-home-privilege__present {
   position: relative;
@@ -203,6 +241,10 @@
     position: relative;
   }
 
+  &--line {
+    text-decoration: underline;
+  }
+
   @include mq(xl) {
     padding-top: 45px;
   }
@@ -236,7 +278,7 @@
   }
 
   @include mq(lg) {
-    gap: 30px;
+    gap: 20px;
   }
 
   @include mq(md) {
@@ -251,6 +293,11 @@
 
   @include mq(md) {
     max-width: 650px;
-    width: 90%;
   }
+}
+
+
+.p-home-privilege__reserve {
+  text-align: center;
+  margin-top: 15px;
 }

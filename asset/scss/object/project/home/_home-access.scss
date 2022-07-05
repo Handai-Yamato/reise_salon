@@ -12,8 +12,12 @@
   }
 
   @include mq(xl) {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  @include mq(md) {
+    padding-top: 60px;
   }
 }
 
@@ -21,6 +25,10 @@
   text-align: center;
   margin-top: 80px;
   margin-bottom: 30px;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
 }
 
 .p-home-access__content {
@@ -89,10 +97,19 @@
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 70%;
   }
 
   @include mq(md) {
     max-width: unset;
 
+  }
+}
+
+.p-home-access__reserve {
+  display: none;
+
+  @include mq(md) {
+    display: block;
   }
 }

@@ -13,9 +13,15 @@
   margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 60px;
-  @include mq(xl) {
-    padding-right: 5%;
-    padding-left: 5%;
+  
+  @include mq(lg) {
+    padding-right: 10%;
+    padding-left: 10%;
+
+  }
+
+  @include mq(md) {
+    padding-top: 60px;
   }
 }
 
@@ -32,6 +38,7 @@
 
   @include mq(md) {
     flex-direction: column;
+    padding-top: 70px;
   }
 }
 

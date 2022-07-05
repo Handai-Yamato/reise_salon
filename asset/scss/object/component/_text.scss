@@ -4,6 +4,10 @@
 .c-text--xxl {
   font-size: 2.4rem;
 
+  @include mq(lg) {
+    font-size: calc(2.1rem + 3 * (100vw - 767px) / 256); //28px~20pxで可変
+  }
+
   @include mq(md) {
     font-size: calc(2.0rem + 8 * (100vw - 575px) / 192); //28px~20pxで可変
   }

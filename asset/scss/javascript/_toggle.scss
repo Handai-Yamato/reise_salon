@@ -35,7 +35,7 @@
   transform: rotate(0deg);
 
   @include mq(md) {
-    right: 13%;
+    right: 16%;
   }
 }
 
@@ -45,17 +45,35 @@
   transform: rotate(90deg);
 
   @include mq(md) {
-    right: 13%;
+    right: 16%;
   }
 }
 
-// クリックされた時に形状変化
+// クリックされた時に形状変化(header)
 .js-toggle.is-show-done::before {
   transform: rotate(45deg);
 }
 
 .js-toggle.is-show-done::after {
   transform: rotate(-45deg);
+}
+
+// クリックされた時に形状変化(home-menu)
+.p-home-menu__toggle.js-toggle.is-show-done::before {
+  transform: rotate(0deg);
+}
+
+.p-home-menu__toggle.js-toggle.is-show-done::after {
+  display: none;
+}
+
+// クリックされた時に形状変化(home-privilege)
+.p-home-privilege__toggle.js-toggle.is-show-done::before {
+  transform: rotate(0deg);
+}
+
+.p-home-privilege__toggle.js-toggle.is-show-done::after {
+  display: none;
 }
 
 /******** クリックされたら表示されるエリア **********/

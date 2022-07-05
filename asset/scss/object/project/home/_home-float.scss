@@ -1,0 +1,59 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-home-float {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.p-home-float__sns {
+
+  @include mq(md) {
+    position: fixed;
+    right: -23px;
+    top: 54vh;
+    z-index: index($elements, p-home-nav);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    a {
+        display: inline-block;
+    }
+  }
+
+  @include mq(sm) {
+    top: 63vh;
+    right: -34px;
+  }
+}
+
+.p-home-float__sns img {
+    width: 50%;
+
+    @include mq(sm) {
+      width: 36%;
+    }
+}
+
+.p-home-float__copyright {
+  display: none;
+  @include mq(md) {
+    display: block;
+    font-size: 1.0rem;
+    color: $color-text4;
+    position: fixed;
+    left: -108px;
+    top: 68vh;
+    z-index: index($elements, p-home-nav);
+    transform: rotate(-90deg);
+  }
+
+
+  @include mq(sm) {
+    top: 65vh;
+  }
+}

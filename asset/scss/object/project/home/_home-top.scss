@@ -4,7 +4,6 @@
 .p-home-top {
   position: relative;
   margin-top: -100px; //headerの高さだけ上に詰める
-  height: 1080px;
   margin: 0 calc(50% - 50vw);
   overflow: hidden;
 
@@ -12,7 +11,7 @@
     content: "";
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     @include bg-image-jpg($filename: home-top-bg);
     background-repeat: no-repeat;
     background-position: 40% center; //変数上書き
@@ -20,15 +19,16 @@
     animation: zoom 8s 1;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+
   }
 
 
   @include mq(md) {
-    height: 1100px;
+    // height: 1100px;
   }
 
   @include mq(sm) {
-    height: 850px;
+    // height: 850px;
   }
 
 } 
@@ -45,12 +45,20 @@
 .p-home-top__inner {
   text-align: center;
   @include centering();
-  top: 55%;
   width: 100%;
+
+  @include mq(xl) {
+
+  }
 
   @include mq(md) {
     padding-right: 6%;
     padding-left: 6%;
+    top: 45%;
+
+  }
+
+  @include mq(sm) {
   }
 
 }
@@ -65,7 +73,7 @@
 
   @include mq(md) {
     font-size: calc(1.7rem + 19 * (100vw - 320px) / 447); //36px~17pxで可変
-
+    margin-top: 15px;
   }
   font-size: 36px;
   color: $color-text1;

@@ -76,6 +76,7 @@
   }
 }
 
+// hover時にテキスト変換
 .l-header__item a span {
   transition: all 0.5s;
   display: inline-block;
@@ -143,8 +144,6 @@
 }
 
 .l-header__fix-list li a {
-  position: relative;
-
   position: relative;
 
   /*hover時に下線をひく*/
@@ -278,22 +277,22 @@
 .l-header__modal-menu {
   border-radius: 4px;
   position: absolute;
-  top: 40px;
+  top: 120px;
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: index($elements, l-header__modal-menu);
   text-align: center;
-  max-width: 500px;
+  max-width: 750px;
 
 
   @include mq(md) {
-    padding-top: 30px;
+    top: 40px;
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
     overflow: auto;
-    max-width: 80%;
+    max-width: 75%;
   }
 }
 
@@ -316,7 +315,10 @@
   }
 
   @include mq(md) {
+    justify-content: space-between;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
+    order: 2;
+    margin-top: 20px;
   }
 }
 
@@ -347,6 +349,8 @@
   margin-top: 30px;
 
   @include mq(md) {
+    order: 4;
+    margin-top: 10px;
     @include mq(sp) {
       display: none;
     }
@@ -384,12 +388,14 @@
     display: block;
     font-size: calc(1.4rem + 10 * (100vw - 320px) / 447); //24px~14pxで可変
     max-height: 600px;
+    order: 3;
+    margin-top: 10px;
   }
 }
 
 // 一番上の要素以外にmargin-topを指定
 .l-header__modal-item ~ .l-header__modal-item {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .l-header__modal-list--lg {
@@ -420,6 +426,10 @@
     height: 100px;
   }
 
+  @include mq(lg) {
+    width: 85%;
+  }
+
   @include mq(md) {
     display: none;
   }
@@ -429,14 +439,14 @@
   display: none;
   @include mq(md) {
     display: inline-block;
-    width: 100%;
+    width: 95%;
     max-width: 600px;
     color: #ffffff;
     background: $color-text2;
     font-size: 2.4rem;
     padding: 10px;
     text-align: center;
-    margin: 40px 0;
+    margin: 15px 0;
     font-size: calc(1.2rem + 12 * (100vw - 320px) / 447); //24px~12pxで可変
 
     span {
@@ -452,7 +462,6 @@
 }
 
 .l-header__modal-sns {
-  margin-top: 30px;
 
   a {
     display: inline-block;
@@ -464,19 +473,18 @@
 
   @include mq(md) {
     order: 1;
-    margin-top: 0;
     margin-top: -10px;
     text-align: left;
   }
 }
 
 .l-header__modal-copyright {
-  margin-top: 20px;
+  margin-top: 10px;
 
   @include mq(md) {
     text-align: left;
-    order: 3;
-    margin-top: 60px;
+    order: 5;
+    margin-top: 10px;
   }
 }
 
@@ -508,6 +516,3 @@
   }
 }
 
-.l-header__modal-copyright {
-  margin-top: 20px;
-}

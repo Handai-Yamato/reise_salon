@@ -15,10 +15,10 @@
   max-width: 175px;
 
   @include mq(md) {
-    padding: 2%;
+    padding: 1%;
     max-width: 110px;
-    font-size: 1.1rem;
-    top: 110px;
+    font-size: 1.0rem;
+    top: 70px;
     right: 10px;
   }
 }

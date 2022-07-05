@@ -18,6 +18,11 @@
     display: none;
   }
 }
+.u-lg-d-none {
+  @include mq(lg) {
+    display: none;
+  }
+}
 .u-md-d-none {
   @include mq(md) {
     display: none;
