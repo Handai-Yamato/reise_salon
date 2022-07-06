@@ -11,7 +11,7 @@
 .l-footer__inner {
   margin: 0 auto;
   padding-top: 100px;
-  padding-bottom: 250px;
+  height: 70vh;
 
   @include mq(md) {
     padding-right: 5%;
